@@ -575,6 +575,7 @@ footer{
 	margin: 0 auto;
 	_background-color: #f00;
 	position: relative;
+	padding-bottom: 80px;
 }
 .menuBt01>ul{
 	position: absolute;
@@ -714,9 +715,8 @@ footer{
 
 
 /* sub02 */
-.location{
+.subimg{
 	width: 1260px;
 	margin: 0 auto;
-	padding-left: 30px;
 }
 .location>img{}
