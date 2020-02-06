@@ -29,6 +29,17 @@
 			$(".prevBtn").click(function(){
 				mySlide.goToPrevSlide();
 			});
+			$(".toggleMenu").click(function(){
+				var myClass = $(this).attr("class");
+				console.log(myClass)
+				if(myClass == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$("#main_menu").stop().animate({left:0},300)
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$("#main_menu").stop().animate({left:"-100%"},300)
+				}
+			})
 		});
 	</script>
 	<script>
@@ -43,39 +54,42 @@
 				<ul class="clearfix">
 					<li><a href="#">조리원안내</a>
 						<ul class="submenu">
-							<li><a href="sub.html">맘스케어 소개</li></a>
+							<li><a href="sub.html">맘스케어</li></a>
 							<li><a href="sub02.html">찾아오시는 길</li></a>
 						</ul>		
 					</li>
 					<li><a href="#">시설소개</a>
 						<ul class="submenu">
-							<li><a href="#">신생아실</li></a>
-							<li><a href="#">산모실</li></a>
-							<li><a href="#">편의시설</li></a>
+							<li><a href="sub03.html">신생아실</li></a>
+							<li><a href="sub04.html">산모실</li></a>
 						</ul>
 					</li>
 					<li><a href="#">프로그램</a>
 						<ul class="submenu">
-							<li><a href="#">산전프로그램</li></a>
-							<li><a href="#">산후프로그램</li></a>
-							<li><a href="#">산모케어</li></a>
+							<li><a href="sub05.html">산전,후프로그램</li></a>
+							<li><a href="sub06.html">토탈케어</li></a>
 						</ul>
 					</li>
 					<li><a href="#">이용안내</a>
 						<ul class="submenu">
-							<li><a href="#">이용요금</li></a>
-							<li><a href="#">이용 및 준수사항</li></a>
-							<li><a href="#">예약문의</li></a>
+							<li><a href="sub07.html">이용요금</li></a>
+							<li><a href="sub08.html">이용 및 준수사항</li></a>
+							<li><a href="sub09.html">예약문의</li></a>
 						</ul>
 					</li>
 					<li><a href="#">커뮤니티</a>
 						<ul class="submenu">
-							<li><a href="#">공지사항</li></a>
-							<li><a href="#">이용후기</li></a>
+							<li><a href="sub10.html">공지사항</li></a>
+							<li><a href="sub11.html">이용후기</li></a>
 						</ul>
 					</li>
 				</ul>
 			</nav>
+		<div class="toggleMenu">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
 		</div>
 		<div class="slider_wrap">
 			<ul class="slider">
