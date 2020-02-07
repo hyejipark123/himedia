@@ -4,6 +4,7 @@ header#main_header{
 	height: 1200px;
 	background-color: #fff;
 	position: relative;
+	margin-bottom: 30px;
 }
 .sub_header{height: 460px !important;
 	margin-bottom: 0 !important;}
@@ -78,7 +79,8 @@ background-color: #000;}
 
 /* slider */
 .slider_wrap{
-	height: 400px;}
+	height: 400px;
+}
 .slider_wrap ul li{
 	height: 400px;
 	background-color: black;
@@ -103,8 +105,8 @@ background-color: #000;}
 .slider_wrap .slider_txt{
 	position: absolute;
 	width: 200px;
-	left: 150px;
-	top: 30%;
+	left: 80px;
+	top: 40%;
 	text-align: left;	
 	color: #fff;
 }
@@ -197,13 +199,13 @@ background-color: #000;}
 .container{
 	background: url(../images/bgrev01.jpg) no-repeat center;
 	background-size: cover;
-	height: 900px;
-	margin-bottom: 50px;
+	height: 650px;
+	_margin-bottom: 50px;
 }
 .section{
-	width: 1260px;
+	width: 100%;
 	margin: 0 auto;
-	padding-top: 70px;
+	padding-top: 50px;
 }
 .section h2{
 	text-align: center;
@@ -225,53 +227,41 @@ background-color: #000;}
 }
 .section> p>span{color:#e3a26d;}
 .section>ul>li{
-	float: left;
-	margin-right: 30px;
-	transition: 0.3s;
+	margin: 30px 0 ;
+	margin-left: 30px;
 }
 .section>ul>li:last-child{
 	margin-right: 0;
 }
-.container ul>li:hover{
-	box-shadow: 8px 8px 10px rgba(0,0,0,0.5);
-	transform: translate(-10px,-10px)
-}
-
 .reviewTxt{
-	width: 400px;
-	height: 550px;
+	width: 300px;
+	height: 100px;
 	background-color: #dcd5d3;
 	color: #000;
 	position: relative;
+	border-radius: 15px 50px;
+	font-size: 13px;
 }
-.sticker{
-	position: absolute;
-	top: -30px;
-	left: 50%;
-	margin-left: -20px;
+.reviewTxt>img{display: none;}
+.sticker{display: none}
 
-}
 .reviewTxt>h4{
 	padding-top: 30px;
 	padding-left: 10px;
 	text-align: center;
+	line-height: 30px;
 }
-.reviewTxt>p{
-	padding-left: 15px;
-	text-align: left;
+.reviewTxt>p{display: none;
 }
 
-.reviewTxt>p a:hover{
-	color: blue;
-}
 
 
 /*container2*/
 .container2{
+	height: 2000px;
 }
 .feature{
-	width: 1260px;
-	height: 1550px;
+	width: 100%;	
 	margin: 0 auto;
 	padding-top: 100px;
 	_background-color: pink;
@@ -289,28 +279,29 @@ background-color: #000;}
 /* box1 */
 .boxone{}
 .boxone>li{
-	float: left;
-	width: 50%;
-	height: 425px;
+	_float: left;
+	width: 100%;
+	height: 300px;
 }
 .boxone>li img{
+	width: 300px;
 	position: absolute;
 	right: 20px;
 	z-index: 2;
 }
 .sbox1{
-	width: 630px;
+	width: 250px;
 	height: 135px;
 	background-color: #dcdadb;
 	position: absolute;
-	bottom: 0;
+	top: 200px;
 	z-index: 1;
 	transition: 0.3s;
 }
 .boxo_txt{
 	position: absolute;
 	left: 50px;
-	top: 80px;
+	top: 30px;
 }
 .boxo_txt>h4{
 	font-size: 25px;
@@ -323,22 +314,21 @@ background-color: #000;}
 /* box2 */
 .boxtwo{}
 .boxtwo>li{
-	float: right;
-	width: 50%;
-	height: 425px;
+	width: 100%;
+	height: 300px;
 }
 .boxtwo>li img{
+	width: 300px;
 	position: absolute;
 	left: 20px;
 	z-index: 2;
-
 }
 .sbox2{
-	width: 630px;
+	width: 250px;
 	height: 135px;
 	background-color: #b27652;
 	position: absolute;
-	bottom: 0;
+	top: 200px;
 	z-index: 1;
 	transition: 0.3s;
 }
@@ -359,11 +349,12 @@ background-color: #000;}
 /* box3 */
 .boxthree{}
 .boxthree>li{
-	float: left;
-	width: 50%;
-	height: 425px;
+	_float: left;
+	width: 100%;
+	height: 300px;
 }
 .boxthree>li img{
+	width: 300px;
 	position: absolute;
 	right: 20px;
 	z-index: 2;
