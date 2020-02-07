@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta charset="UTF-8">
 	<title>:::MOM'S CARE:::</title>
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
@@ -39,7 +40,18 @@
 					$(".toggleMenu").removeClass("change");
 					$("#main_menu").stop().animate({left:"-100%"},300)
 				}
-			})
+			});
+			// $(window).on("resize",function(){});
+			$(window).resize(function(){
+				var wSize = $(window).width();
+				console.log(wSize);
+				if(wSize > 960){
+					$("#header_top").find(".toggleMenu").removeClass("change");
+				}else{
+					$("#header_top").find(".toggleMenu").removeClass("change");
+					$("#main_menu").css({left:"-100%"});
+				}
+			});
 		});
 	</script>
 	<script>
@@ -254,7 +266,7 @@
 					<img src="images/rev02.png" alt="리뷰이미지">
 					<img src="images/sticker.png" class="sticker">
 					<h4>[육아일기] 맘스케어조리원 후기</h4><br>
-					<p>지인 추천으로 예약했던 맘스케어 산후조리원!<br>사실 애기 태어나기 전 부터 가장 신중하게 고민했던<br>부분이 조리원이었다. 제일 중요시 했던 건 <br>친정집과의거리~ 친정에서 도보로 15분거리에<br> 위치하고 있고 교통편 또한 좋았고, 상담원분께서<br> 너무 친절하게 상담해주셔서 걱정과는 달리 빠르게<br> 결정을 할수 있었다. 추천해준 지인에게 너무 고맙다고.... <a href="#">▶</a>
+					<p>지인 추천으로 예약했던 맘스케어 산후조리원!<br>사실 애기 태어나기 전 부터 가장 신중하게<br> 고민했던 부분이 조리원이었다. 제일 중요시 했던 건 <br>친정집과의거리~ 친정에서 도보로 15분거리에<br> 위치하고 있고 교통편 또한 좋았고, 상담원분께서<br> 너무 친절하게 상담해주셔서 걱정과는 달리 빠르게<br> 결정을 할수 있었다. 추천해준 지인에게 너무 고맙다고.... <a href="#">▶</a>
 					</p>
 
 				</li>
@@ -262,7 +274,7 @@
 					<img src="images/rev03.png" alt="리뷰이미지">
 					<img src="images/sticker.png" class="sticker">
 					<h4>7일간의 특별한 케어 #맘스케어산후조리원</h4><br>
-					<p>둘째, 울 행복이가 안정기에 들어왔을때,<br> 남편하고 산후조리원 투어를 다니기 시작했어요.<br> 산후조리원을 선택함에 있어 우리 가족에게<br> 중요한 부분을 정리했어요 :)<br> 집에서 가까울 것, 객실에 차이가 없을 것, 전문가가 함께 하는지 이렇게 3가지를 두니 저는 당연히<br> 맘스케어 산후조리원으로 마음이 기울었고,<br>그자리에서 바로 계약... <a href="#">▶</a>
+					<p>둘째, 울 행복이가 안정기에 들어왔을때,<br> 남편하고 산후조리원 투어를 다니기 시작했어요.<br> 산후조리원을 선택함에 있어 우리 가족에게<br> 중요한 부분을 정리했어요 :)<br> 집에서 가까울 것, 객실에 차이가 없을 것,<br> 전문가가 함께 하는지 이렇게 3가지를 두니<br> 저는 당연히 맘스케어 산후조리원으로 <br> 마음이 기울었고,그자리에서 바로 계약... <a href="#">▶</a>
 					</p>
 					
 				</li>
