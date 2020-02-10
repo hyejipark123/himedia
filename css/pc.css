@@ -771,3 +771,9 @@ footer{
 	margin: 0 auto;
 	margin-bottom: 50px;
 }
+.adtxt{
+	padding: 50px 30px;
+}
+.adtxt>h4{
+	line-height: 60px;
+}
