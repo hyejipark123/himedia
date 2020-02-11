@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-body{overflow-y: auto;}
 header#main_header{
 	height: 1950px;
 	background-color: #fff;
@@ -324,8 +323,7 @@ header#main_header{
 
 
 /*container2*/
-.container2{
-}
+.container2{}
 .feature{
 	width: 1260px;
 	height: 1550px;
