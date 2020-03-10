@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>:::SEOUL BIKE:::</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#fullpage").fullpage({
+				anchors:["1st","2st","3st","4st","5st"],
+				menu:"#topMenu",
+				navigation:true,
+				slideNavigation:true
+			});
+			function animate(){
+			$('.bg_bike').css('left', '+=10');
+			if($('.bg_bike').position().left >= 2000) $('.bg_bike').css('left', '-600px');
+			}
+			setInterval(animate, 50);
+
+			$(window).resize(function(){
+				sHeight();
+			});
+
+			function sHeight(){
+				var sliderHeight = $(window).height();
+				$(".slider1").height(sliderHeight);
+			}
+			sHeight();
+			
+			$(".sliderWrap").bxSlider({pager:false});
+
+		});
+
+	</script>
+</head>
+<body>
+	<nav id="navTop">
+		<div class="header">
+			<img src="images/logo.png" alt="Logo">
+			<ul id="topMenu" class="clearfix">
+				<li>
+					<a href="javascript:void(0);">따릉이란</a>
+					<ul class="submenu">
+						<li><a href="#!">따릉이소개</a></li>
+						<li><a href="#!">이용안내</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);">대여소조회</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">이용권구매</a>
+					<ul class="submenu">
+						<li><a href="#!">회원</a></li>
+						<li><a href="#!">비회원</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);">고객센터</a>
+					<ul class="submenu">
+						<li><a href="#!">공지사항</a></li>
+						<li><a href="#!">시민의견수렴</a></li>
+						<li><a href="#!">FAQ</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div id="fullpage">
+
+		<!-- #page1 -->
+		<div class="section page" id="page1" data-anchor="1st">
+			<!-- 구름 -->
+			<div class="bg_cloud">
+				<img src="images/cloud.png" alt="구름" class="cloud1">
+				<img src="images/cloud1.png" alt="구름" class="cloud2">
+				<img src="images/cloud2.png" alt="구름" class="cloud3">
+			</div>
+			<!-- 자동차 -->
+			<div class="bg_car">
+				<img src="images/car.png" alt="car" class="car1">
+				<img src="images/car1.png" alt="car" class="car2">
+				<img src="images/car2.png" alt="car" class="car3">
+			</div>
+			<!-- 태극기 -->
+			<div class="flag">
+				<img src="images/flag.png" alt="flag">
+			</div>
+			<!-- 자전거 -->
+			<div class="bg_bike">
+				<img src="images/bikeh.png" alt="bike">
+			</div>
+		</div>
+
+		<!-- #page2 -->
+		<div class="section page" id="page2" data-anchor="2st">
+			<div class="flexWrap">
+				<div class="flexbox">
+					<div class="content">
+						<a href="#">대여방법</a>
+					</div>
+				</div>
+				<div class="flexbox">
+					<div class="content">
+						<a href="#">반납방법</a>
+					</div>
+				</div>
+				<div class="flexbox">
+					<div class="content">
+						<a href="#">대여소현황</a>
+					</div>
+				</div>
+				<div class="flexbox">
+					<div class="content">
+						<a href="#">대여하기</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- #page3 -->
+		<div class="section page" id="page3" data-anchor="3st">
+			
+		</div>
+
+		<!-- #page4 -->
+		<div class="section page" id="page4" data-anchor="4st">
+			<div class="page4Tit">
+				<h2>따릉이타고 <span>"서울"</span> 어디까지 가봤니?</h2>
+				<p>#따릉이 #따릉이드라이브</p>
+			</div>
+			<div class="slide">
+				<div class="sView">
+					<ul class="clearfix">
+						<li><img src="images/slide01.png" alt=""></li>
+						<li><img src="images/slide02.png" alt=""></li>
+						<li><img src="images/slide03.png" alt=""></li>
+					</ul>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="sView">
+					<ul class="clearfix">
+						<li><img src="images/slide04.png" alt=""></li>
+						<li><img src="images/slide05.png" alt=""></li>
+						<li><img src="images/slide06.png" alt=""></li>
+					</ul>
+				</div>
+			</div>	
+			<div class="slide">
+				<div class="sView">
+					<ul class="clearfix">
+						<li><img src="images/slide07.png" alt=""></li>
+						<li><img src="images/slide08.png" alt=""></li>
+						<li><img src="images/slide09.png" alt=""></li>
+					</ul>
+				</div>
+			</div>
+			<div class="slide">
+				<div class="sView">
+					<ul class="clearfix">
+						<li><img src="images/slide10.png" alt=""></li>
+						<li><img src="images/slide05.png" alt=""></li>
+						<li><img src="images/slide01.png" alt=""></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<!-- #page5 -->
+		<div class="section page" id="page5" data-anchor="5st">
+		 <div class="notice">
+		 	<h2>공지사항</h2>
+		 	<p>따릉이의 다양한 소식을 확인해보세요.</p>
+		 <div class="noticelist">
+		 	<ul class="clearfix">
+		 		<li>
+		 			<img src="images/note.png" alt="공지">
+		 			<a href="#">
+		 				<span class="txt">신종 코로나 바이러스감염<br> 관련 예방수칙 안내</span>
+		 			</a>
+		 			<span class="data">2020.02.27</span>
+		 		</li>
+		 		<li>
+		 			<img src="images/impor.png" alt="중요">
+		 			<a href="#">
+		 				<span class="txt">QR형 따릉이 운영 안내</span>
+		 			</a>
+		 			<span class="data">2020.02.01</span>
+		 		</li>
+		 		<li>
+		 			<img src="images/note.png" alt="공지">
+		 			<a href="#">
+		 				<span class="txt">서울공공자전거 따릉이 리플릿</span>
+		 			</a>
+		 			<span class="data">2020.01.28</span>
+		 		</li>
+		 		<li>
+		 			<img src="images/note.png" alt="공지">
+		 			<a href="#">
+		 				<span class="txt">따릉이 제로페이 이벤트 연장 안내</span>
+		 			</a>
+		 			<span class="data">2020.01.10</span>
+		 		</li>
+		 		<li>
+		 			<img src="images/note.png" alt="공지">
+		 			<a href="#">
+		 				<span class="txt">2020년 신규대여소 설치예정지<br> (2019년도 확정분)</span>
+		 			</a>
+		 			<span class="data">2019.12.30</span>
+		 		</li>
+		 		<li>
+		 			<img src="images/note.png" alt="공지">
+		 			<a href="#">
+		 				<span class="txt">대중교통 환승 마일리지 적립 안내</span>
+		 			</a>
+		 			<span class="data">2017.01.01</span>
+		 		</li>
+		 	</ul>
+		 	<footer>
+		 		
+		 	</footer>
+		 </div>	
+		 </div>
+		</div>
+		<div class="section page fp-auto-height" id="page6" data-anchor="6st">
+			<div class="footer" style="height:100px;background:skyblue"></div>
+		</div>
+	</div>
+</body>
+</html>
