@@ -36,12 +36,27 @@ nav#navTop{
 
 /*페이지 배경*/
 #page1{background-image: url(../images/bg1p.jpg);}
-#page3{background-image: url(../images/bg3.jpg);}
+#page3{background-image: url(../images/page3.jpg);}
 #page4{background-image: url(../images/seoul1.jpg);}
+#page5{background-color: #f3e9cc;}
 .page{
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+}
+.scroll{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	animation-name: xScroll;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes xScroll{
+	from{bottom:20px;}
+	to{bottom: 40px;}
 }
 
 /*page #1*/
@@ -82,25 +97,28 @@ nav#navTop{
 	position: absolute;
 	top: 50%;
 	left: 17%;
-	animation:carO 1.2s alternate infinite;
+	animation:car1 1.2s alternate infinite;
 }
-@keyframes carO{
+@keyframes car1{
 	to{transform: translate(20px, 0px);}
 }
 .car2{
 	position: absolute;
 	top: 52%;
 	left: 30%;
+	animation:car2 1.2s alternate infinite;
+}
+@keyframes car2{
+	to{transform: translate(20px, 0px);}
 }
 .car3{
 	position: absolute;
 	top: 55%;
 	left: 25%;
+	animation:car3 1.2s alternate infinite;
 }
-.flag{
-	position: absolute;
-	left: 45%;
-	top: 18%;
+@keyframes car3{
+	to{transform: translate(-20px, 0px);}
 }
 .bg_bike{
 	position: absolute;
@@ -193,7 +211,96 @@ nav#navTop{
 .flexWrap .flexbox:hover{
 	filter: none;
 }
+
+
 /*page #3*/
+.phoneWrap{
+	width: 1000px;
+	height: 700px;
+	position: relative;
+	_background-color: pink;
+	margin: 0 auto;	
+}
+.phoneI{}
+.phoneI{
+	width: 500px;
+	height: 800px;
+}
+.phoneI>li{
+	float: left;
+	position: absolute;
+	top: 3%;
+}
+.phoneI>li:nth-child(1){
+	position: absolute;
+	z-index: 0;
+}
+.phoneI>li:nth-child(2){
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	left:20px;
+	top: 50px;
+}
+.phoneI>li:nth-child(3){
+	position: absolute;
+	left:20px;
+	top: 50px;
+	z-index: 2;
+	opacity: 0;
+}
+
+/*.on*/
+.phoneI.on>li:nth-child(1){
+	position: absolute;
+	z-index: 0;
+	animation:pi1 1s ease-in;
+}
+@keyframes pi1{
+	to{left: 0;}
+}
+.phoneI.on>li:nth-child(2){
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	left:20px;
+	top: 50px;
+	animation:pi2 1s 0.2s forwards ease-in;
+	box-shadow: -5px 5px 5px 5px rgba(0,0,0,0.2);  
+}
+@keyframes pi2{
+	30%{opacity: 1;}
+	to{left: 70px; top: 0px; opacity: 1;}
+}
+.phoneI.on>li:nth-child(3){
+	position: absolute;
+	left:20px;
+	top: 50px;
+	z-index: 2;
+	opacity: 0;
+	animation:pi3 1s 0.6s forwards ease-in;
+	box-shadow: -5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+@keyframes pi3{
+	40%{opacity: 0;}
+	70%{opacity: 1;}
+	to{left:120px; top: -20px; opacity: 1;}
+}
+.phoneI>li>img{display: block;}
+
+.phoneIcon{position: absolute;top: 13%;left: 49%;}
+.phoneIcon img{}
+.phoneT{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 25%;
+	left: 50%;}
+.phoneT>h1{color: #fff;font-size: 60px;}
+.phoneT2{width: 600px;height: 100px;position: absolute;top: 55%;left: 50%;}
+.phoneT2>h1{color: #fff;}
+.download{width: 500px;height: 70px;position: absolute;top: 80%;left: 50%;}
+.download>a:first-child{margin-right: 10px;}
 
 
 /*page #4*/
@@ -206,6 +313,7 @@ nav#navTop{
 	transform: translateX(-50%);
 	top: 18%;}	
 .page4Tit h2{font-size:30px;color: #fff;padding-bottom: 10px;}	
+.page4Tit h2>span{font-size: 35px; color: #000;}
 .page4Tit p{color: #fff;font-weight: bold;}	
 .slide{padding-top: 80px;}
 .sView ul{
@@ -218,44 +326,65 @@ nav#navTop{
 	margin: 0 33.33px;
 }
 
+380
 /*page #5*/
+.page5{width: 100%;height: 100%;}
 .noticeBox{
 	width: 1200px;
-	height: 700px;
+	height: 750px;
 	margin: auto;
 	_background-color: skyblue;
-	position: relative;
+	margin-top: 70px;
 }
-.notice{
-	width: 295px;height: 295px;
-	background-color: #fff;
-	text-align: center;
-	padding-top: 80px;
-	border: 5px solid green;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-}
-.notice>h2{
-	font-size: 25px;
-	padding:10px 0;
-}
-.notice>p{
-	font-size: 16px;
-}
-.noticelist{position: relative;}
+.notice h1{padding:40px 0 10px 0 ;}
+.notice>p{font-size: 16px;}
 .listbox{
-	width: 879px;
-	height: 700px;
-	float: right;
+	width: 1200px;
+	height: 250px;
 	padding-top: 50px;
-	}
+}
 .listbox>li{
 	float: left;
-	width: 293px;
-	height: 293px;
+	width: 300px;
+	height: 200px;
+	margin: 0 5px;
 	background-color: #eee;
-	border: 1px solid #000;
-	padding-top: 10px;}
+	padding-top: 10px;
+	border: 1px solid #ddd;
+	margin-bottom: 50px;
+}
+.listbox>li:nth-child(2){
+	width: 250px;
+	height: 200px;}	
+.listbox>li:last-child{margin-right: 0;}
 .listbox>li img{display: block;}
-.listbox>li .txt{display: block;padding: 10px 0;font-weight: bold;font-size: 19px;}
+.listbox>li .txt{
+	display: block;
+	padding: 10px 0;
+	font-weight: bold;
+	font-size: 18px;}
+.listbox>li .data{font-size: 13px;margin-left: 6px;}
+.more>a, .more1>a{font-weight: bold;font-size: 14px;color: #e83014;display: none;}
+.more1>a{margin-top: 25px;}
+.listbox>li:hover .more>a{display: block;}
+.listbox>li:hover .more1>a{display: block;}
+.channel{width: 1200px;height: 400px;_background-color: red;}
+.cvideo{width: 1200px;height: 300px;}
+.cTit{padding:20px 0;}
+.cvideo iframe{margin-right: 24.2px;}
+.cvideo iframe:last-child{margin-right: 0;}
+
+/* page6 */
+.footerWrap{width: 1200px;margin: auto;}
+.footernav>ul{}
+.footernav>ul>li{
+	float: left;
+	margin-right: 15px;
+	cursor: pointer;
+	padding-top: 10px;
+	font-size: 14px;
+}
+.address{
+	font-size: 14px;
+	padding-top: 10px;
+}
