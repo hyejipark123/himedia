@@ -13,12 +13,8 @@ nav#navTop{
 	width: 1200px;
 	padding-top: 30px;
 }
-.header>ul{
-	float: right;
-}
-.header>ul>li{
-	float: left;
-}
+.header>ul{float: right;}
+.header>ul>li{float: left;}
 .header>ul>li>a{
 	display: block;
 	line-height: 50px;
@@ -27,17 +23,14 @@ nav#navTop{
 	font-weight: bold;
 }
 .submenu{display: none;}
-.submenu>li{
-	color: #fff;
-	text-align: center;
-	line-height:40px;}	
+.submenu>li{color: #fff;text-align: center;line-height:40px;}	
 .header>ul>li:hover .submenu{display: block;}
 
 /*페이지 배경*/
 #page1{background-image: url(../images/bg1p.jpg);}
 #page3{background-image: url(../images/page3.jpg);}
 #page4{background-image: url(../images/seoul1.jpg);}
-#page5{background-color: #f3e9cc;}
+#page5{background-image: url(../images/bg5.jpg);}
 .page{
 	background-repeat: no-repeat;
 	background-position: center;
@@ -59,25 +52,28 @@ nav#navTop{
 }
 
 /*page #1*/
-.section{
-	position: relative;
-}
-.cloud1{
+.section{position: relative;}
+.textBox{
+	text-align: center;
+	width: 800px;
+	_background-color: pink;
 	position: absolute;
-	top:150px;
-	left: 25%;
+	top: 18%;left: 50%;
+	transform: translateX(-50%);
+	z-index: 9999;}
+.textBox h1{font-size: 40px;}
+.textBox h1>span{color: #589054;font-size: 45px;position: relative;}
+.textBox h1>span:after{
+	content: "";background-color: #589054;
+	width: 15px;height: 10px;clip-path: polygon(50% 78%, 0 0, 100% 0);
+	position: absolute;top: 0;left: 12px;}
+.cloud1{position: absolute;top:150px;left: 25%;
 	animation:cloud 1.2s both cubic-bezier(0.38, 0.07, 0.71, 1.04) alternate infinite; 
 }
-.cloud2{
-	position: absolute;
-	top: 80px;
-	left: 42%;
+.cloud2{position: absolute;top: 80px;left: 42%;
 	animation:cloudOne 1.4s both cubic-bezier(0.38, 0.07, 0.71, 1.04) alternate infinite; 
 }
-.cloud3{
-	position: absolute;
-	top:200px;
-	left: 60%;
+.cloud3{position: absolute;top:200px;left: 60%;
 	animation:cloudTwo 1.5s both cubic-bezier(0.38, 0.07, 0.71, 1.04) alternate infinite; 
 
 }
@@ -121,28 +117,19 @@ nav#navTop{
 }
 .bus{
 	position: absolute;
-	right: 15%;
-	top: 60%;
+	right: 10%;
+	top: 50%;
 	animation:bus 2s alternate infinite forwards;
 }
 @keyframes bus{
-	to{right: 30px;}
+	to{right: 10px;}
 }
-.bg_bike{
-	position: absolute;
-	left: 0;
-	top: 60%;
-}
-.bg_bike>img{
-	position: absolute;
-	left: 0;
-	top: 60%;
-}
+.bg_bike{position: absolute;left: 0;top: 60%;}
+.bg_bike>img{position: absolute;left: 0;top: 60%;}
 
 /*page #2*/
 
 .flexWrap{
-
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -157,12 +144,8 @@ nav#navTop{
 	overflow: hidden;
 	transition: 0.5s ease-in-out;
 }
-.flexWrap .flexbox:last-child{
-	border-right: none;
-}
-.flexWrap .flexbox:hover{
-	flex-grow: 2;
-}
+.flexWrap .flexbox:last-child{border-right: none;}
+.flexWrap .flexbox:hover{flex-grow: 2;}
 .flexWrap .flexbox:nth-child(1){
 	background: url(../images/sbike01.jpg);
 	background-position: center center;
@@ -216,10 +199,7 @@ nav#navTop{
 	transition-delay: 0.5s;
 	transform: translateY(0);
 }
-.flexWrap .flexbox:hover{
-	filter: none;
-}
-
+.flexWrap .flexbox:hover{filter: none;}
 
 /*page #3*/
 .phoneWrap{
@@ -229,7 +209,6 @@ nav#navTop{
 	_background-color: pink;
 	margin: 0 auto;	
 }
-.phoneI{}
 .phoneI{
 	width: 500px;
 	height: 800px;
@@ -295,9 +274,7 @@ nav#navTop{
 	to{left:120px; top: -20px; opacity: 1;}
 }
 .phoneI>li>img{display: block;}
-
 .phoneIcon{position: absolute;top: 13%;left: 49%;}
-.phoneIcon img{}
 .phoneT{
 	width: 400px;
 	height: 200px;
@@ -324,60 +301,54 @@ nav#navTop{
 .page4Tit h2>span{font-size: 35px; color: #000;}
 .page4Tit p{color: #fff;font-weight: bold;}	
 .slide{padding-top: 80px;}
-.sView ul{
-	width: 1400px;
-	margin: 0 auto;
-}
-.slide ul>li{
-	float: left;
-	width: 400px;
-	margin: 0 33.33px;
-}
+.sView ul{width: 1400px;margin: 0 auto;}
+.slide ul>li{float: left;width: 400px;margin: 0 33.33px;}
 
 /*page #5*/
 .page5{width: 100%;height: 100%;}
 .noticeBox{
 	width: 1200px;
-	height: 750px;
+	height: 800px;
 	margin: auto;
 	_background-color: skyblue;
-	margin-top: 70px;
+	margin-top: 50px;
 }
-.notice h1{padding:40px 0 10px 0 ;}
-.notice>p{font-size: 16px;}
+.notice h1{padding:40px 0 10px 0; color: #fff;}
+.notice>p{font-size: 16px; color: #fff;}
 .listbox{
 	width: 1200px;
-	height: 250px;
+	height: 300px;
+	margin-top: 30px;
 	padding-top: 50px;
+	background-color: #fff;
 }
 .listbox>li{
 	float: left;
 	width: 300px;
 	height: 200px;
 	margin: 0 5px;
-	background-color: #eee;
 	padding-top: 10px;
-	border: 1px solid #ddd;
+	_border: 1px solid #ddd;
 	margin-bottom: 50px;
+	position: relative;
 }
-.listbox>li:nth-child(2){
-	width: 250px;
-	height: 200px;}	
+.listbox>li:nth-child(2){width: 250px;height: 200px;}	
 .listbox>li:last-child{margin-right: 0;}
+.listbox>li:before{content: "";display: block;height: 100px;width: 1px;background-color: #eee;
+position: absolute;top: 30px;left: -20px}
+.listbox>li:first-child:before{display: none;}
 .listbox>li img{display: block;}
-.listbox>li .txt{
-	display: block;
-	padding: 10px 0;
-	font-weight: bold;
-	font-size: 18px;}
+.listbox>li .txt{display: block;padding: 10px 0;font-weight: bold;font-size: 18px;}
 .listbox>li .data{font-size: 13px;margin-left: 6px;}
-.more>a, .more1>a{font-weight: bold;font-size: 14px;color: #e83014;display: none;}
-.more1>a{margin-top: 25px;}
 .listbox>li:hover .more>a{display: block;}
 .listbox>li:hover .more1>a{display: block;}
-.channel{width: 1200px;height: 400px;_background-color: red;}
+
+.more>a, .more1>a{font-weight: bold;font-size: 14px;color: #e83014;display: none;}
+.more1>a{margin-top: 25px;}
+
+.channel{width: 1200px;height: 400px;_background-color: red;padding-top: 20px;}
 .cvideo{width: 1200px;height: 300px;}
-.cTit{padding:20px 0;}
+.cTit{padding:20px 0;color: #fff;}
 .cvideo iframe{margin-right: 24.2px;}
 .cvideo iframe:last-child{margin-right: 0;}
 
@@ -391,7 +362,30 @@ nav#navTop{
 	padding-top: 10px;
 	font-size: 14px;
 }
-.address{
-	font-size: 14px;
-	padding-top: 10px;
+.address{font-size: 14px;padding-top: 10px;}
+
+/* top */
+.top{
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	right: 50px;
+	bottom: -100px;
+	border-radius: 50%;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	animation:viewTop 1s infinite alternate;
+	opacity: 0; 
+	transition: 0.4s;
+}
+.top.view{
+	opacity: 1;
+	bottom: 50px;
+}
+@keyframes viewTop{
+	from{transform: translateY(-20px);}
+	to{transform: translateY(0);}
 }

@@ -19,15 +19,14 @@
 				navigation:true,
 				slideNavigation:true,
 				afterLoad:function(link,index){
-					console.log(link+","+index);
 					if(index == 3){
 						$(".phoneI").addClass("on");
 					}else{
 						$(".phoneI").removeClass("on");
 					}
-			
 				}
 			});
+
 			function animate(){
 			$('.bg_bike').css('left', '+=10');
 			if($('.bg_bike').position().left >= 2000) $('.bg_bike').css('left', '-600px');
@@ -43,8 +42,8 @@
 				$(".slider1").height(sliderHeight);
 			}
 			sHeight();
-			
 			$(".sliderWrap").bxSlider({pager:false});
+
 		});
 	</script>
 </head>
@@ -79,12 +78,20 @@
 					</ul>
 				</li>
 			</ul>
+		<div class="toggleMenu">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
 		</div>
 	</nav>
 	<div id="fullpage">
 
 		<!-- #page1 -->
 		<div class="section page" id="page1" data-anchor="1st">
+			<div class="textBox">
+				<h1>서울자전거 <span>'따</span><span>릉</span><span>이'</span>를 타보세요!</h1>
+			</div>
 			<!-- 구름 -->
 			<div class="bg_cloud">
 				<img src="images/cloud.png" alt="구름" class="cloud1">
@@ -229,7 +236,7 @@
 						<li>
 							<img src="images/note.png" alt="공지">
 							<span class="data">2020.02.27</span>
-							<span class="txt">신종 코로나 바이러스감염 관련 예방수칙 안내</span>
+							<span class="txt">신종 코로나 바이러스감염 관련<br> 예방수칙 안내</span>
 							<div class="more">
 								<a href="#"><p>READ MORE ▶</p></a>
 							</div>
