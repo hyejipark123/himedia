@@ -38,11 +38,13 @@ nav#navTop{
 .toggleMenu .bar2{top:21px;}
 .toggleMenu .bar3{top:31px;}
 .toggleMenu{
-	float: right;
+	_float: right;
 	width: 50px;
 	height: 50px;
-	background-color: #D97762;
-	position: relative;
+	background-color: #589054;
+	position: fixed;
+	right: 7px;
+	top: 20px;
 	cursor: pointer;
 }
 .toggleMenu div{
@@ -51,14 +53,13 @@ nav#navTop{
 	background-color: #fff;
 	position: absolute;
 	border-radius: 3px;
-	left:7px;
+	left: 7px;
 	transition: 0.5s;
 }
 .toggleMenu.change .bar1{transform: rotate(-45deg);top:21px;background-color: #fff;}
 .toggleMenu.change .bar2{opacity: 0;}
-.toggleMenu.change .bar3{transform: rotate(45deg);top: 21px;
-background-color: #fff;}
-.toggleMenu.change{position: fixed;z-index:999999;right:0;}
+.toggleMenu.change .bar3{transform: rotate(45deg);top: 21px;background-color: #fff;}
+.toggleMenu.change{position: fixed;z-index:999999;}
 
 /*페이지 배경*/
 #page1{background-image: url(../images/bg1p.jpg);}
@@ -114,7 +115,6 @@ background-color: #fff;}
 .car3{position: absolute;top: 65%;left: 35%;}
 .bus{display: none;}
 .bg_bike{display: none;}
-.bg_bike{}
 
 /*page #2*/
 

@@ -37,6 +37,16 @@
 					$("#topMenu").stop().animate({left:"-100%"},300)
 				}
 			});
+			$(window).resize(function(){
+				var wSize = $(window).width();
+				console.log(wSize);
+				if(wSize > 960){
+					$(".header").find(".toggleMenu").removeClass("change");
+				}else{
+					$(".header").find(".toggleMenu").removeClass("change");
+					$("#topMenu").css({left:"-100%"});
+				}
+			});
 			var myslide = $('.sView').slick({
 				  dots: false,
 				  autoplay:false,
