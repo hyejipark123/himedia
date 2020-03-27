@@ -11,9 +11,29 @@
 	<script src="js/script.js"> </script>
 	<script>
 		$(document).ready(function(){
+			
 			$('.first-button').on('click', function () {
    			$('.animated-icon1').toggleClass('open');
   			});
+
+			$(window).scroll(function(){
+				scrollYPo();
+			});
+			function scrollYPo(){
+				var scrollY = $(window).scrollTop();
+				var winH = $("html").height()/2;
+				console.log(winH);
+
+				if(scrollY >= winH){
+					$(".top").addClass("view");
+				}else{
+					$(".top").removeClass("view");
+				}
+			}
+			$(".top").click(function(e){
+				e.preventDefault();
+				$("html,body").animate({scrollTop:0},1000);
+			});
 		});
 	</script>
 </head>
@@ -22,7 +42,7 @@
 	<div class="bg_b">
 			<div class="container">
 		<nav class="navbar navbar-expand-lg navbar-dark bg_b">
-		<a class="navbar-brand" href="index.html"><img src="logo.png" alt=""></a>
+		<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
 		  	<button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
 		    aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
 		    <div class="animated-icon1"><span></span><span></span><span></span></div>
@@ -68,31 +88,31 @@
 					onmouseover="this.src='images/icon01_1.png'"
 					onmouseout="this.src='images/icon01.png'">
 					<h4 class="fontf">레트로볼링장</h4>
-					<p>우수한 시설과 레트로 느낌의 인테리어로 색다른 느낌을 즐길 수 있는 볼링장</p>
+					<p class="px-5 px-md-0 mb-5 mb-md-0">우수한 시설과 레트로 느낌의 인테리어로 색다른 느낌을 즐길 수 있는 볼링장</p>
 				</div>
 				<div class="imenu ifac col-md-3">
 					<img src="images/icon02.png" alt="시설안내"
 					onmouseover="this.src='images/icon02_1.png'"
 					onmouseout="this.src='images/icon02.png'">
 					<h4 class="fontf">시설안내</h4>
-					<p>볼링장내에 다양한 시설들을 통해 한층 더 즐거운 게임을 즐겨보세요!</p>
-					<a href="facintro.html"><button type="button" class="btn btn-outline-success">READ MORE</button></a>
+					<p class="px-5 px-md-0">볼링장내에 다양한 시설들을 통해 한층 더 즐거운 게임을 즐겨보세요!</p>
+					<a href="facintro.html"><button type="button" class="btn btn-outline-success mb-5 mb-md-0">READ MORE</button></a>
 				</div>
 				<div class="imenu iuse col-md-3">
 					<img src="images/icon03.png" alt="이용안내"
 					onmouseover="this.src='images/icon03_1.png'"
 					onmouseout="this.src='images/icon03.png'">
 					<h4 class="fontf">이용안내</h4>
-					<p>레트로볼링장 이용관련 요금표 및 이용안내 입니다.</p>
-					<a href="guide.html"><button type="button" class="btn btn-outline-success">READ MORE</button></a>
+					<p class="px-5 px-md-0">레트로볼링장 이용관련 요금표 및 이용안내 입니다.</p>
+					<a href="guide.html"><button type="button" class="btn btn-outline-success mb-5 mb-md-0">READ MORE</button></a>
 				</div>
 				<div class="imenu ireview col-md-3">
 					<img src="images/icon04.png" alt="볼링장후기"
 					onmouseover="this.src='images/icon04_1.png'"
 					onmouseout="this.src='images/icon04.png'">
 					<h4 class="fontf">볼링장후기</h4>
-					<p>여러분들이 이용한 레트로 볼링장의 리얼한 후기를 남겨주세요</p>
-					<a href="review.html"><button type="button" class="btn btn-outline-success">READ MORE</button></a>
+					<p class="px-5 px-md-0">여러분들이 이용한 레트로 볼링장의 리얼한 후기를 남겨주세요</p>
+					<a href="review.html"><button type="button" class="btn btn-outline-success mb-5 mb-md-0">READ MORE</button></a>
 				</div>
 			</div>
 		</div>
@@ -159,7 +179,7 @@
 			<div class="card-deck py-4 text-center">
 			  <div class="card">
 			    <div class="card-body">
-			      <h4 class="card-title"><a href="#" class="text-white">동호회소개</a></h4>
+			      <h4 class="card-title"><a href="club.html" class="text-white">동호회소개</a></h4>
 			    </div>
 			  </div>
 			  <div class="card">
@@ -192,6 +212,9 @@
 			</div>
 		</div>
 	</section>
+	<div class="top">
+		<img src="images/top.png" alt="">
+	</div>
 	<!-- footer -->
 	<footer class="bg_b">
 		<div class="container py-3 text-center text-white">

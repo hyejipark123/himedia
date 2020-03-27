@@ -94,6 +94,23 @@ transform: rotate(-135deg);
 @keyframes circle{
  to{stroke-dasharray: 0;}
 }
+.top{
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	right: 50px;
+	bottom: -100px;
+	cursor: pointer;
+	animation:viewtop 1s infinite alternate;
+	opacity: 0;
+	transition: 0.4s;
+}
+@keyframes viewtop{
+	from{transform: translateY(-20px);}
+	to{transform: translateY(0);}
+}
+.top.view{opacity: 1;bottom: 50px;}
+
 .footert{font-size: 14px} 
 
 
@@ -127,3 +144,9 @@ column-width: 100%;
 @media (max-width: 400px) {
 .btn.filter {padding-left: 1.1rem;padding-right: 1.1rem;}
 }
+
+/* sub_club */
+.clubwrap{background: url(../images/clubbg.jpg) no-repeat center;background-size: cover;}
+
+/*sub_event*/
+.img-fluid:hover{transform: scale(1.1);}
