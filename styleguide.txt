@@ -1,0 +1,51 @@
+bowling style guide
+
+01. color palette
+
+* background color
+- #173a4d / main,footer 
+- #efb758 / contents
+- #e2dbc9 / contents
+- #bf5a36 /contents
+
+*img
+- #841710 /main-round
+- #bf5a36/ main-round
+- #81ac8b/ main-round
+
+*text
+- #ffffff
+#000000 
+- #efb758
+
+02. typography
+
+*font-size
+-menu: 16px(noto)
+-submenu : 16px(noto)
+- icon title : 20px(¾ç)
+- icon text: 14px (noto)
+- icon moreview: 16px(n)
+
+-contents Title :45px(¾ç)
+-title text:18px(n)
+
+-info title: 18px(¾ç)
+-info text:100%(n)
+
+- notice text: 15px
+-data:15px
+
+-footer text: 12px
+
+18 16 14 12
+
+
+
+https://mdbootstrap.com/docs/jquery/javascript/google-maps/
+https://codepen.io/yamoo9/pens/public?cursor=ZD0wJm89MSZwPTEmdj0yMTAzMDY0Nw==
+https://bondavinci.com/
+
+
+
+

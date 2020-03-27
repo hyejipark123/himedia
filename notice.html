@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>RETROBOWLING</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"> </script>
+	<script>
+		$(document).ready(function(){
+			$('.first-button').on('click', function () {
+   			$('.animated-icon1').toggleClass('open');
+  			});
+		});
+	</script>
+</head>
+<body>
+	<div class="bg_y">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light bg_y">
+			<a class="navbar-brand" href="index.html"><img src="logo.png" alt="">
+			</a>
+		  	<button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
+		    aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+		    <div class="animated-icon1"><span></span><span></span><span></span></div>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent20">
+		   <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+		     <li class="nav-item">
+		       <a class="nav-link" href="facintro.html">시설안내</a>
+		     </li>
+		     <li class="nav-item">
+		       <a class="nav-link" href="guide.html">이용안내</a>
+		     </li>
+		     <li class="nav-item">
+		       <a class="nav-link" href="event.html">이벤트&대회</a>
+		     </li>
+		     <li class="nav-item dropdown">
+			     <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">커뮤니티</a>
+			     <div class="dropdown-menu">
+			       <a class="dropdown-item" href="#">공지사항</a>
+			       <a class="dropdown-item" href="review.html">SNS리뷰</a>
+	    		 </div>
+  		 	 </li>
+		    </ul>
+		  </div>
+		</nav>
+	</div>
+</div>
+
+<div class="bg_b">
+	<div class="container text-center text-white py-5 table-responsive">
+		<h2 class="fontf mb-4">공지사항</h2>
+		<table class="table table-sprited text-white bg_rgba">
+			<thead>
+				<tr>
+					<th>번호</th>
+					<th>제목</th>
+					<th>작성자</th>
+					<th>날짜</th>
+					<th>조회수</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th scope="row">41</th>
+					<td><a href="#!" class="tdlink font-weight-bold">코로나바이러스 소독 관련 안내</a></td>
+					<td>관리자</td>
+					<td>2020.03.27</td>
+					<td>2,537</td>
+				</tr>
+				<tr>
+					<th scope="row">40</th>
+					<td><a href="#!" class="tdlink font-weight-bold">개인 강습 문의 관련 안내</a></td>
+					<td>관리자</td>
+					<td>2020.03.25</td>
+					<td>1,537</td>
+				</tr>
+				<tr>
+					<th scope="row">39</th>
+					<td><a href="#!" class="tdlink">외부음식 반입 금지합니다</a></td>
+					<td>관리자</td>
+					<td>2020.03.01</td>
+					<td>817</td>
+				</tr>
+				<tr>
+					<th scope="row">38</th>
+					<td><a href="#!" class="tdlink">단체 예약 문의 안내</a></td>
+					<td>관리자</td>
+					<td>2020.02.17</td>
+					<td>1,537</td>
+				</tr>
+				<tr>
+					<th scope="row">37</th>
+					<td><a href="#!" class="tdlink">설 연휴 영업시간 및 예약 안내</a></td>
+					<td>관리자</td>
+					<td>2020.01.23</td>
+					<td>477</td>
+				</tr>
+				<tr>
+					<th scope="row">36</th>
+					<td><a href="#!" class="tdlink">2020년 새해 복 많이 받으세요 :)</a></td>
+					<td>관리자</td>
+					<td>2020.01.01</td>
+					<td>2,101</td>
+				</tr>
+				<tr>
+					<th scope="row">35</th>
+					<td><a href="#!" class="tdlink">레트로 볼링장 연말 파티 안내</a></td>
+					<td>관리자</td>
+					<td>2019.12.28</td>
+					<td>11,537</td>
+				</tr>
+				<tr>
+					<th scope="row">34</th>
+					<td><a href="#!" class="tdlink">크리스마스/이브에 이용하시는 고객님들께 안내드립니다.</a></td>
+					<td>관리자</td>
+					<td>2019.12.23</td>
+					<td>9,101</td>
+				</tr>
+				<tr>
+					<th scope="row">33</th>
+					<td><a href="#!" class="tdlink">11/11 빼빼로데이 맞이 1+1게임</a></td>
+					<td>관리자</td>
+					<td>2019.11.07</td>
+					<td>5,678</td>
+				</tr>
+				<tr>
+					<th scope="row">32</th>
+					<td><a href="#!" class="tdlink">내부 인테리어 공사로 인한 휴업 안내(9/3~9/7)</a></td>
+					<td>관리자</td>
+					<td>2019.09.01</td>
+					<td>1,234</td>
+				</tr>
+			</tbody>
+		</table>
+		<ul class="pagination justify-content-center pt-3">
+	    <li class="page-item"><a class="page-link" href="javascript:void(0);">1</a></li>
+	    <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+	    <li class="page-item"><a class="page-link" href="javascript:void(0);">3</a></li>
+	    <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+  </ul>
+	</div>
+</div>
+
+
+	<footer class="bg_y">
+		<div class="container py-2 text-center">
+			<div class="row">
+				<div class="col-md-3">
+					<img src="images/logo_black.png" alt="로고_흑백">
+				</div>
+				<div class="footert col-md-7">
+					<p>레트로볼링장 ｜ 대표 : 박혜지 ｜ 전화 : 02-123-4567<br>주소 : 서울특별시 구로구 구로동 경인로 557 삼영빌딩 4층<br>
+						<span class="font-weight-bold">COPYRIGHT 2020 레트로볼링장 all rights reserved.</span></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
