@@ -283,12 +283,11 @@ header#main_header{
 .reviewWrap{width: 1200px;height: 650px;}
 .reviewWrap>ul>li{position: relative;}
 .revtxt{height: 300px;background-color: #e2d8ce;padding: 10px}
-.revtxt>p{margin-bottom: 10px;right: 5px;}
+.revtxt>p{margin-bottom: 10px;right: 5px;font-size: 14px}
 .revtxt h4{margin-bottom: 15px;}
 .revtxt a{float: right;}
 .revtxt a:hover{color: #f00}
 .blog{display: block;float: left;margin-top: 60px;margin-right: 10px;}
-.blog img{}
 .data{font-weight: bold;float: left;margin-top: 65px;}
 .data span{font-size: 12px}
 .section> p>span{color:#e3a26d;}
