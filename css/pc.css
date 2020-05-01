@@ -312,51 +312,16 @@ nav#navTop{
 
 /*page #5*/
 .page5{width: 100%;height: 100%;}
-.noticeBox{
-	width: 1200px;
-	height: 800px;
-	margin: auto;
-	_background-color: skyblue;
-	margin-top: 50px;
-}
-.notice h1{padding:40px 0 10px 0; color: #fff;}
-.notice>p{font-size: 16px; color: #fff;}
-.listbox{
-	width: 1200px;
-	height: 300px;
-	margin-top: 30px;
-	padding-top: 50px;
-	background-color: #fff;
-}
-.listbox>li{
-	float: left;
-	width: 300px;
-	height: 200px;
-	margin: 0 5px;
-	padding-top: 10px;
-	_border: 1px solid #ddd;
-	margin-bottom: 50px;
-	position: relative;
-}
-.listbox>li:nth-child(2){width: 250px;height: 200px;}	
-.listbox>li:last-child{margin-right: 0;}
-.listbox>li:before{content: "";display: block;height: 100px;width: 1px;background-color: #eee;
-position: absolute;top: 30px;left: -20px}
-.listbox>li:first-child:before{display: none;}
-.listbox>li img{display: block;}
-.listbox>li .txt{display: block;padding: 10px 0;font-weight: bold;font-size: 18px;}
-.listbox>li .data{font-size: 13px;margin-left: 6px;}
-.listbox>li:hover .more>a{display: block;}
-.listbox>li:hover .more1>a{display: block;}
-
-.more>a, .more1>a{font-weight: bold;font-size: 14px;color: #e83014;display: none;}
-.more1>a{margin-top: 25px;}
-
-.channel{width: 1200px;height: 400px;_background-color: red;padding-top: 20px;}
-.cvideo{width: 1200px;height: 300px;}
-.cTit{padding:20px 0;color: #fff;}
-.cvideo iframe{margin-right: 24.2px;}
-.cvideo iframe:last-child{margin-right: 0;}
+.noticeWrap{width: 1200px;height: 700px;margin: 0 auto;}
+.noticeWrap h1{text-align: center;}
+.noticeBox img{display: block;}
+.noticeBox{padding-top: 30px;}
+.boxOne{width: 300px;height: 620px;float: left;}
+.boxTwo{width: 600px;height: 620px;float: left;}
+.boxThree{width: 300px;height: 620px;float: left;}
+.zero:hover .over{display: block;}
+.over{display: none;width: 300px;height: 310px;background-color: rgba(0,0,0,0.6);position: relative;top: -310px;}
+.over p{color: #fff;text-align: center;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);font-weight: bold;font-size: 18px}
 
 /* page6 */
 .footerWrap{width: 1200px;margin: auto;}
