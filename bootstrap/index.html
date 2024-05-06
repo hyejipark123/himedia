@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>RETROBOWLING</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"> </script>
+	<script src="js/jquery.bxslider.js"> </script>
+	<script>
+		$(document).ready(function(){
+			$('.first-button').on('click', function () {
+   			$('.animated-icon1').toggleClass('open');
+  			});
+
+			$(window).scroll(function(){
+				scrollYPo();
+			});
+			function scrollYPo(){
+				var scrollY = $(window).scrollTop();
+				var winH = $("html").height()/2;
+				console.log(winH);
+
+				if(scrollY >= winH){
+					$(".top").addClass("view");
+				}else{
+					$(".top").removeClass("view");
+				}
+			}
+			$(".top").click(function(e){
+				e.preventDefault();
+				$("html,body").animate({scrollTop:0},1000);
+			});
+		});
+	</script>
+</head>
+<body>
+	<!-- header -->
+	<div class="bg_b">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark bg_b">
+			<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a>
+			  	<button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
+			    aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+			    <div class="animated-icon1"><span></span><span></span><span></span></div>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarSupportedContent20">
+			    <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+			      <li class="nav-item">
+			        <a class="nav-link" href="facintro.html">시설안내</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="guide.html">이용안내</a>
+			      </li>
+			      <li class="nav-item">
+			        <a class="nav-link" href="event.html">이벤트&대회</a>
+			      </li>
+			      <li class="nav-item dropdown">
+				      <a class="nav-link dropdown-toggle" href="notice.html" id="navbardrop" data-toggle="dropdown">
+				        커뮤니티
+				      </a>
+				      <div class="dropdown-menu">
+				        <a class="dropdown-item" href="notice.html">공지사항</a>
+				        <a class="dropdown-item" href="review.html">이용후기</a>
+		    		  </div>
+	  		 	 	</li>
+			    </ul>
+			  </div>
+			</nav>
+		</div>
+	</div>
+	<!-- contents01 -->
+	<div class="bg_b">
+		<div class="container">
+			<div class="header_wrap">
+				<h1><img src="images/main_t.png" alt="" class="w-100"></h1>
+			</div>
+		</div>
+	</div>
+	<div class="bg_y py-5">
+		<div class="container text-center">
+			<div class="row">
+				<div class="imenu iinfo col-md-3">
+					<img src="images/icon01.png" alt="볼링장소개" 
+					onmouseover="this.src='images/icon01_1.png'"
+					onmouseout="this.src='images/icon01.png'">
+					<h4 class="fontf">레트로볼링장</h4>
+					<p class="px-5 px-md-0 mb-5 mb-md-0">우수한 시설과 레트로 느낌의 인테리어로 색다른 느낌을 즐길 수 있는 볼링장</p>
+				</div>
+				<div class="imenu ifac col-md-3">
+					<img src="images/icon02.png" alt="시설안내"
+					onmouseover="this.src='images/icon02_1.png'"
+					onmouseout="this.src='images/icon02.png'">
+					<h4 class="fontf">시설안내</h4>
+					<p class="px-5 px-md-0">볼링장내에 다양한 시설들을 통해 한층 더 즐거운 게임을 즐겨보세요!</p>
+					<a href="facintro.html"><button type="button" class="btn btn-outline-success mb-5 mb-md-0">READ MORE</button></a>
+				</div>
+				<div class="imenu iuse col-md-3">
+					<img src="images/icon03.png" alt="이용안내"
+					onmouseover="this.src='images/icon03_1.png'"
+					onmouseout="this.src='images/icon03.png'">
+					<h4 class="fontf">이용안내</h4>
+					<p class="px-5 px-md-0">레트로볼링장 이용관련 요금표 및 이용안내 입니다.</p>
+					<a href="guide.html"><button type="button" class="btn btn-outline-success mb-5 mb-md-0">READ MORE</button></a>
+				</div>
+				<div class="imenu ireview col-md-3">
+					<img src="images/icon04.png" alt="볼링장후기"
+					onmouseover="this.src='images/icon04_1.png'"
+					onmouseout="this.src='images/icon04.png'">
+					<h4 class="fontf">볼링장후기</h4>
+					<p class="px-5 px-md-0">여러분들이 이용한 레트로 볼링장의 리얼한 후기를 남겨주세요</p>
+					<a href="review.html"><button type="button" class="btn btn-outline-success mb-5 mb-md-0">READ MORE</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Event -->
+	<section class="bg_w py-5">
+		<div class="container text-center">
+			<h1 class="txt_n">이달의 이벤트!</h1>
+			<div class="row">
+				<div class="event col-md-6">
+					<img src="images/event01.png" alt="이벤트" class="w-100">
+				</div>
+				<div class="event col-md-6">
+					<img src="images/event02.png" alt="이벤트" class="w-100">
+				</div>
+			</div>
+		</div>
+	</section> 
+	<!-- Video -->
+	<section class="bg_o py-5 d-none d-md-block">
+		<div class="container text-center">
+			<h1 class="txt_y">홍보늬-우스</h1>
+			<div class="row">
+				<div class="col-1"></div>
+				<div class="col-10">
+					<div class="videobox">
+						<img src="images/tv.png" alt="">
+						<video autoplay muted loop>
+							<source src="images/2.mp4">
+						</video>
+					</div>
+				</div>
+				<div class="col-1"></div>
+			</div>
+		</div>
+	</section>
+	<!-- info -->
+	<section class="pagebt">
+		<div class="container py-5 text-center text-white fontf">
+			<div class="card-deck">
+			  <div class="card">
+			    <div class="card-body">
+			      <h4 class="card-title">영업시간</h4>
+			      <p class="card-text">
+			      	* 평일/주말<br>10:00 ~ 02:00<br>* 일반 볼링 10:00 ~ 18:00<br>* 락 볼링 18:00 ~ 02:00
+			      </p>
+			      <h4>이용요금</h4>
+			      <p class="card-text">
+			      	* 평일 1게임당 2,500원<br>* 주말 1게임당 3,000원<br>* 볼링화대여료 1,000원
+			      </p>
+			    </div>
+			  </div>
+			  <div class="card">
+			    <div class="card-body">
+			      <h4 class="card-title text-center">SNS</h4>
+			    	<a href="#!"><img src="images/youtube.png" alt="유튜브" class="py-1 w-100"></a>
+			    	<a href="#!"><img src="images/instar.png" alt="인스타그램" class="py-1 w-100"></a>
+			    	<a href="#!"><img src="images/call.png" alt="인스타그램" class="py-1 w-100"></a>
+			    </div>
+			  </div>
+			</div>
+			<div class="card-deck py-4 text-center">
+			  <div class="card">
+			    <div class="card-body">
+			      <h4 class="card-title"><a href="club.html" class="text-white">동호회소개</a></h4>
+			    </div>
+			  </div>
+			  <div class="card">
+			    <div class="card-body">
+			      <h4 class="card-title"><a href="notice.html" class="text-white">공지사항</a></h4>
+			    </div>
+			  </div>
+			  <div class="card" data-toggle="modal" data-target="#modalRegular">
+			    <div class="card-body btn">
+			      <h4 class="card-title"><a href="#!" class="text-white">볼링장오시는길</a></h4>
+			    </div>
+			    <!--Map Modal-->
+					<div class="modal fade" id="modalRegular" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+					  aria-hidden="true">
+					  <div class="modal-dialog modal-lg" role="document">
+					    <div class="modal-content">
+					      <div class="modal-body mb-0 p-0">
+					        <!--Google map-->
+					        <div id="map-container-google-16" class="z-depth-1-half map-container-9" style="height: 400px">
+					          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.2053744176833!2d126.87679691564658!3d37.50307403551715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9fc70bce5993%3A0xdd5b5b33e55b538e!2z7ZWY7J2066-465SU7Ja07Lu07ZOo7YSw7ZWZ7JuQ6rWs66Gc7Lqg7Y287Iqk!5e0!3m2!1sko!2skr!4v1585125369452!5m2!1sko!2skr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					        </div>
+					      </div>
+					      <div class="modal-footer justify-content-center">
+					        <button type="button" class="btn btn-outline-info btn-md" data-dismiss="modal">닫기<i class="fas fa-times ml-1"></i></button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</section>
+	<div class="d-none d-md-block top">
+		<img src="images/top.png" alt="" >
+	</div>
+	<!-- footer -->
+	<footer class="bg_b">
+		<div class="container py-3 text-center text-white">
+			<div class="row">
+				<div class="col-md-3">
+					<img src="images/logo_black.png" alt="로고_흑백">
+				</div>
+				<div class="footert col-md-7">
+					<p>레트로볼링장 ｜ 대표 : 박혜지 ｜ 전화 : 02-123-4567<br>주소 : 서울특별시 구로구 구로동 경인로 557 삼영빌딩 4층<br>
+						<span class="font-weight-bold">COPYRIGHT 2020 레트로볼링장 all rights reserved.</span></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

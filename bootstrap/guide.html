@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>RETROBOWLING</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/script.js"> </script>
+	<script>
+		$(document).ready(function(){
+			$('.first-button').on('click', function () {
+   			$('.animated-icon1').toggleClass('open');
+  			});
+		});
+	</script>
+</head>
+<body>
+	<div class="bg_y">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-light bg_y">
+			<a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="로고"></a>
+		  	<button class="navbar-toggler first-button" type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
+		    aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+		    <div class="animated-icon1"><span></span><span></span><span></span></div>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent20">
+		   <ul class="navbar-nav ml-auto mt-2 mt-md-0">
+		     <li class="nav-item">
+		       <a class="nav-link" href="facintro.html">시설안내</a>
+		     </li>
+		     <li class="nav-item">
+		       <a class="nav-link" href="guide.html">이용안내</a>
+		     </li>
+		     <li class="nav-item">
+		       <a class="nav-link" href="event.html">이벤트&대회</a>
+		     </li>
+		     <li class="nav-item dropdown">
+			     <a class="nav-link dropdown-toggle" href="notice.html" id="navbardrop" data-toggle="dropdown">커뮤니티</a>
+			     <div class="dropdown-menu">
+			       <a class="dropdown-item" href="notice.html">공지사항</a>
+			       <a class="dropdown-item" href="review.html">이용후기</a>
+	    		 </div>
+  		 	 </li>
+		    </ul>
+		  </div>
+		</nav>
+	</div>
+</div>
+<div class="bg_b">
+	<div class="guide_Tit">
+		<!-- <img src="images/guide_tit.png" alt=""> -->
+	</div>
+	<div class="container">
+		<div class="guide_txt">
+			<h2>영업시간 및 이용요금</h2>
+			<p>*밤 10시 이후 미성년자끼리는 출입이 제한됩니다.</p>
+		</div>
+		<div class="card-deck py-5">
+		  <div class="card guide">
+		    <div class="card-body">
+		      <!-- <h5 class="card-title">Panel title</h5> -->
+		      <img src="images/guide_icon01.png" alt="">
+		      <p class="card-text">평일(월~금)<br>주간 10:00 ~ 18:00<br>야간 18:00 ~ 02:00<br><span>2,500원</span></p>
+		    </div>
+		  </div>
+		  <div class="card guide">
+		    <div class="card-body">
+		      <img src="images/guide_icon02.png" alt="">
+		      <p class="card-text">주말 및 공휴일<br>주간 10:00 ~ 18:00<br>야간 18:00 ~ 02:00<br><span>3,000원</span></p>
+		    </div>
+		  </div>
+		  <div class="card guide">
+		    <div class="card-body">
+		      <img src="images/guide_icon03.png" alt="">
+		      <p class="card-text">볼링화 대여료<br><span>1,000원</span><br>양말<br><span>1,000원</span></p>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="guide_txt">
+			<h2>볼링장 이용시 <span>주의사항</span></h2>
+		</div>
+		<div class="container py-5">
+			<div class="row caution">
+				<div class="col-3 bg_y ct">
+					<img src="images/ct_icon.png" alt="">
+					<p>이용시주의사항</p>
+				</div>
+				<div class="col-9 caution_txt">
+					<p>√ 메뉴 주문은 카운터 옆에있는 스낵바에 선결제로 진행됩니다.</p>
+					<p>√ 튀김류를 드실때에는 요지 및 젓가락을 이용해주시기 바랍니다.<br><span>  [기름이 손에 묻은 상태에서 공 사용을 삼가해주세요.]</span></p>
+					<p>√ 공이 나올때 세게 나오니 꼭 다치지 않게 조심해주세요.<br><span>  [다칠시 볼링장에서 책임지지 않습니다.]</span></p>
+					<p>√ 게임이 끝난 후 사용하신 볼링공은 제자리에 가져다 주시기 바랍니다.</p>
+					<p>√ 게임이 끝난 후 대여하신 신발은 카운터 왼쪽 신발 소독기에 넣어주세요.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="bg_y">
+		<div class="container py-2 text-center">
+			<div class="row">
+				<div class="col-md-3">
+					<img src="images/logo_black.png" alt="로고_흑백">
+				</div>
+				<div class="footert col-md-7">
+					<p>레트로볼링장 ｜ 대표 : 박혜지 ｜ 전화 : 02-123-4567<br>주소 : 서울특별시 구로구 구로동 경인로 557 삼영빌딩 4층<br>
+						<span class="font-weight-bold">COPYRIGHT 2020 레트로볼링장 all rights reserved.</span></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
