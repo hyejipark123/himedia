@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>:::MOM'S CARE:::</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/wow.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".slider").bxSlider({
+				auto:true,
+				controls:false
+			});
+			$(".rev_slide").slick({
+				 dots: true,
+			  infinite: false,
+			  speed: 200,
+			  slidesToShow: 3,
+			  slidesToScroll: 1,
+			  autoplay:true,
+			  infinite: true,
+			   nextArrow: $(".next_btn"),
+				  prevArrow: $(".prev_btn"),
+			  responsive: [
+			    {
+			      breakpoint: 959,
+			      settings: {
+			        slidesToShow: 1,
+			        slidesToScroll: 1
+			      }
+			    },
+			  ]
+			});
+			var mySlide = $(".slider2").bxSlider({
+				mode:'fade',
+				auto:true,
+				controls:false,
+				pager:false
+			});
+			$(".nextBtn").click(function(){
+				mySlide.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+				mySlide.goToPrevSlide();
+			});
+			$(".toggleMenu").click(function(){
+				var myClass = $(this).attr("class");
+				console.log(myClass)
+				if(myClass == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$("#main_menu").stop().animate({left:0},300)
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$("#main_menu").stop().animate({left:"-100%"},300)
+				}
+			});
+			// $(window).on("resize",function(){});
+			$(window).resize(function(){
+				var wSize = $(window).width();
+				console.log(wSize);
+				if(wSize > 960){
+					$("#header_top").find(".toggleMenu").removeClass("change");
+				}else{
+					$("#header_top").find(".toggleMenu").removeClass("change");
+					$("#main_menu").css({left:"-100%"});
+				}
+			});
+
+		});
+	</script>
+	<script>
+		new WOW().init();
+	</script>
+</head>
+<body>
+	<header id="main_header">
+		<div id="header_top">
+			<h1><a href="#"><img src="images/logo.png" alt=""></a></h1>
+			<nav id="main_menu">
+				<ul class="clearfix">
+					<li><a href="sub.html">조리원안내</a>
+						<ul class="submenu">
+							<li><a href="sub.html">맘스케어</li></a>
+							<li><a href="location.html">찾아오시는 길</li></a>
+						</ul>		
+					</li>
+					<li><a href="newborn
+						.html">시설소개</a>
+						<ul class="submenu">
+							<li><a href="newborn.html">신생아실</li></a>
+							<li><a href="mother.html">산모실</li></a>
+						</ul>
+					</li>
+					<li><a href="program.html">프로그램</a>
+						<ul class="submenu">
+							<li><a href="program.html">산전,후프로그램</li></a>
+							<li><a href="totalcare.html">토탈케어</li></a>
+						</ul>
+					</li>
+					<li><a href="charge.html">이용안내</a>
+						<ul class="submenu">
+							<li><a href="charge.html">이용요금</li></a>
+							<li><a href="tos.html">이용 및 준수사항</li></a>
+							<li><a href="reservation.html">예약문의</li></a>
+						</ul>
+					</li>
+					<li><a href="notice.html">커뮤니티</a>
+						<ul class="submenu">
+							<li><a href="notice.html">공지사항</li></a>
+							<li><a href="review.html">이용후기</li></a>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		<div class="toggleMenu">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		</div>
+		<div class="slider_wrap">
+			<ul class="slider">
+				<li class="slide_1st">
+					<!-- <img src="images/mainimg01.jpg" alt=""> -->
+					<div class="slider_txt">
+						<h3>엄마와 아기를 위한<br>최고의 선택</h3>
+						<p>맘스케어 산후조리원은 단순한 산후조리의 개념에서 벗어나 산모에게는 포근함을 아기에게는 엄마의 마음으로 최고의 품격에 맞는 Total Care Service를 제공하고자 만들어진 산후조리원입니다.</p>
+					</div>
+				</li>
+				<li class="slide_2st">
+					<!-- <img src="images/mainimg01.jpg" alt=""> -->
+					<div class="slider_txt">
+						<h3>엄마와 아기를 위한<br>최고의 선택</h3>
+						<p>맘스케어 산후조리원은 단순한 산후조리의 개념에서 벗어나 산모에게는 포근함을 아기에게는 엄마의 마음으로 최고의 품격에 맞는 Total Care Service를 제공하고자 만들어진 산후조리원입니다.</p>
+					</div>
+				</li>
+				<li class="slide_3st">
+					<!-- <img src="images/mainimg01.jpg" alt=""> -->
+					<div class="slider_txt">
+						<h3>엄마와 아기를 위한<br>최고의 선택</h3>
+						<p>맘스케어 산후조리원은 단순한 산후조리의 개념에서 벗어나 산모에게는 포근함을 아기에게는 엄마의 마음으로 최고의 품격에 맞는 Total Care Service를 제공하고자 만들어진 산후조리원입니다.</p>
+					</div>
+				</li>
+				<li class="slide_4st">
+					<!-- <img src="images/mainimg01.jpg" alt=""> -->
+					<div class="slider_txt">
+						<h3>엄마와 아기를 위한<br>최고의 선택</h3>
+						<p>맘스케어 산후조리원은 단순한 산후조리의 개념에서 벗어나 산모에게는 포근함을 아기에게는 엄마의 마음으로 최고의 품격에 맞는 Total Care Service를 제공하고자 만들어진 산후조리원입니다.</p>
+					</div>
+				</li>
+			</ul>	
+		</div>
+		<div class="content">
+			<ul class="clearfix">
+				<li class="ct1st">
+					<a href="sub.html" class="iconLink">
+						<img src="images/icon01_1.png" alt="맘스케어소개" class="icon">
+						<p>맘스케어 소개</p>
+					</a>
+				</li>
+				<li class="ct2st">
+					<a href="#">
+						<img src="images/bgimg01_1.png" alt="영상" class="bgImg" onmouseover="this.src='images/bggif01_1.gif'" onmouseout="this.src='images/bgimg01_1.png'">
+						<img src="images/icon01_2.png" alt="영상재생" class="play" >
+					</a>
+				</li>
+				<li class="ct3st">
+					<h2>공지사항</h2>
+					<p>맘스케어의 다양한 소식<br>& 함께한 즐거운 이야기</p>
+					<div class="slider2Wrap">
+						<ul class="slider2">
+							<li class="clearfix">
+								<div class="left"></div>
+								<div class="right">
+									<img src="images/sslider1.jpg" alt="02img">
+									<h4>1/25(토) 설날<br>산전 필라테스 휴강공지</h4>
+									<p>맘스케어 산후조리원<br> 문화센터입니다.<br>1/25(토) 설명절로 인해<br> 산전필라테스가 휴강이오니<br> 착오없으시길...<p>
+								</div>
+							</li>
+							<li class="clearfix">
+								<div class="left"></div>
+								<div class="right"><img src="images/sslider2.jpg" alt="02img">
+									<h4>'우한 폐렴' 등의 감염병 예방을<br>위하여 면회를 전면 차단합니다!</h4>
+									<p>안녕하세요?<br>맘스케어 산후조리원입니다.<br>중국 신종 코로나바이러스로 인한<br> ‘우한(武漢) 폐렴’ 사망자와<br>확진 환자가 연일 급증해<br> 2000명에 육박하고...<p>
+								</div>
+							</li>
+							<li class="clearfix">
+								<div class="left"></div>
+								<div class="right"><img src="images/sslider3.jpg" alt="02img">
+									<h4>맘스케어 프로그램<br>이용후기 EVEVT!</h4>
+									<p>안녕하세요?<br>맘스케어 산후조리원에서 <br>진행하는 산전/후 프로그램에<br> 보내주시는 성원에 힘입어 <br>프로그램 후기작성 이벤트를 <br>진행합니다.<p>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="btn clearfix">
+						<img src="images/btn01_01.jpg" alt="prev" class="prevBtn">
+						<img src="images/btn01_02.jpg" alt="next" class="nextBtn">
+					</div>
+				</li>
+				<li class="ct4st">
+					<a href="newborn.html" class="iconLink">
+						<img src="images/icon01_3.png" alt="시설안내" class="icon">
+						<p>시설안내</p>
+					</a>
+				</li>
+				<li class="ct5st">
+					<a href="program.html" class="iconLink">
+						<img src="images/icon01_4.png" alt="프로그램" class="icon">
+						<p>프로그램</p>
+					</a>
+				</li>
+				<li class="ct6st">
+					<a href="#">
+						<img src="images/bgimg01_2.png" alt="" class=bgImg>
+						<div class="card">
+							<h3>최고의 시설</h3>
+							<p>맘스케어는 대한민국<br>최고의 시설을 자랑합니다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="ct7st">
+					<a href="#">
+						<img src="images/bgimg01_3.png" alt=""
+						class=bgImg>
+						<div class="card">
+							<h3>맘스케어</h3>
+							<p>사랑하는 아이와의<br>첫만남을<br>축하드립니다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="ct8st">
+					<a href="#">
+						<img src="images/bgimg01_4.png" alt=""
+						class=bgImg>
+						<div class="card">
+							<h3>Baby CARE 시스템</h3>
+							<p>세계가 인정하는<br>Baby CARE 시스템</p>
+						</div>
+					</a>
+				</li>
+				<li class="ct9st">
+					<a href="charge.html" class="iconLink">
+						<img src="images/icon01_5.png" alt="입실가격안내" class="icon">
+						<p>입실가격안내</p>
+					</a>
+				</li>
+				<li class="ct10st">
+					<a href="reservation.html" class="iconLink">
+						<img src="images/icon01_6.png" alt="예약문의" class="icon">
+						<p>예약문의</p>
+					</a>
+				</li>
+				<li class="ct11st">
+					<a href="#">
+						<img src="images/bgimg01_5.png" alt=""
+						class=bgImg>
+						<div class="card">
+							<h3>산모 Health CARE</h3>
+							<p>많은 산모들의 찬사를 받은<br>탁월한 Health CARE</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+	<div class="container">
+		<div class="section">
+			<h2>MOM's CARE REVIEW</h2>
+			<p>여러분의 소중한 <span>출산후기/조리원후기</span>를 기다립니다.</p>
+			<div class="reviewWrap">
+				<div class="rev_slide">
+					<div>
+						<img src="images/rev01.png" alt="리뷰이미지" class="revimg">
+						<div class="revtxt">
+							<h4>맘스케어 산후조리원/하나부터 열까지 만족!!</h4>
+							<p>안녕하세요. 신생아 축복이 엄마입니다.<br> 초보엄마가 되어서 돌아왔어요. ˘◡˘ <br>조리원 퇴소한지 이제 2주 넘었는데,<br>저는 임신기간 중 일찍부터 조리원을 알아봤었어요.<br> 제가 다니는 병원에 같이 있는 조리원부터<br> 총 4군데를 돌아다녔는데, 맘스케어 조리원....<br> 
+							</p>
+							<a href="review.html">더보기 ▶</a>
+							<div class="blog">
+								<img src="images/blog.png" alt="">
+							</div>
+						<div class="data">
+							행복한 축복이네 <span>2020,01,05</span>
+						</div>
+						</div>
+					</div>
+					<div>
+						<img src="images/rev02.png" alt="리뷰이미지" class="revimg">
+						<div class="revtxt">
+							<h4>[육아일기] 맘스케어조리원 후기</h4>
+							<p>지인 추천으로 예약했던 맘스케어 산후조리원!<br>사실 애기 태어나기 전 부터 가장 신중하게<br> 고민했던 부분이 조리원이었다. 제일 중요시<br> 했던 건 친정집과의거리~ 친정에서 도보로<br> 15분거리에 위치하고 있고 교통편 또한 좋았고,<br> 상담원분께서 너무 친절하게 상담...
+							</p>
+							<a href="review.html">더보기 ▶</a>
+							<div class="blog">
+								<img src="images/blog.png" alt="">
+							</div>
+							<div class="data">
+								지콩의 하루 일상 <span>2019,11,10</span>
+							</div>
+						</div>
+					</div>
+					<div>
+						<img src="images/rev03.png" alt="리뷰이미지" class="revimg">
+						<div class="revtxt">
+							<h4>7일간의 특별한 케어 #맘스케어산후조리원</h4>
+							<p>둘째, 행복이가 안정기에 들어왔을때,<br> 남편하고 산후조리원 투어를 다니기 시작했어요.<br> 산후조리원을 선택함에 있어 중요한 부분을 <br> 정리했어요 :) 집에서 가까울 것, 객실에 차이가 <br> 없을 것, 전문가가 함께 하는지 이렇게<br>3가지를 두니 맘스케어 산후조리원이...
+							</p>
+							<a href="review.html">더보기 ▶</a>
+							<div class="blog">
+								<img src="images/blog.png" alt="">
+							</div>
+							<div class="data">
+								알콩달콩 네식구 <span>2020,02,01</span>
+							</div>
+						</div>
+					</div>
+					<div>
+						<img src="images/rev04.png" alt="리뷰이미지" class="revimg">
+						<div class="revtxt">
+							<h4>산후조리원은 무조건 맘스케어라구요~</h4>
+							<p>퇴원 하고 육아에 지쳐있는 맘입니다^^<br> 잠깐 시간이 남아서 제가 이용했던 산후조리원<br> 리뷰를 남겨보려해요~! 저는 산후조리원을 알아볼<br> 시간도 없이 그냥 제일 가까운 곳으로 결정했는데 <br>급 결정했음에도 불구하고 맘스케어는 진짜<br> 최고였습니다! 식단도 매일 정성스럽게 짜여져...
+							</p>
+							<a href="review.html">더보기 ▶</a>
+							<div class="blog">
+								<img src="images/blog.png" alt="">
+							</div>
+							<div class="data">
+								오늘도 빛나는 하루 <span>2019,08,25</span>
+							</div>
+						</div>
+					</div>
+					<div>
+						<img src="images/rev05.png" alt="리뷰이미지" class="revimg">
+						<div class="revtxt">
+							<h4>맘스케어조리원 추천추천왕추천</h4>
+							<p>산후조리원에서 나온지 벌써 3달 지났네요<br> 일주일 동안 조리원에서 푹 쉬고 케어도 받고<br> 그때가 천국 같은 시간이었네요.. 산후조리원에서<br> 나올 때 선물 받았던 아기용품은 잘 사용하고<br> 있어요 처음 엄마가 되어보니 매 순간이 당황스럽고 <br> 힘든데 맘스케어에서 알려줬던 여러가지...
+							</p>
+							<a href="review.html">더보기 ▶</a>
+							<div class="blog">
+								<img src="images/blog.png" alt="">
+							</div>
+							<div class="data">
+								해피 패밀리 <span>2019,08,25</span>
+							</div>
+						</div>
+					</div>
+					<div>
+						<img src="images/rev06.png" alt="리뷰이미지" class="revimg">
+						<div class="revtxt clearfix">
+							<h4>맘스케어는 진짜로 케어 맛집 Good</h4>
+							<p>맘스케어에서 받았던 마사지를 아직까지도 잊지못하고<br>있어요ㅠㅠ다시 돌아갈 수 있다면 그때로 돌아가고<br> 싶어요..마사지 받던 때로..많은 카페에서 산후조리원<br> 후기를 찾아봤는데 케어마사지에서 호불호가<br>있더라구요 저는 마사지때문이라도 맘스케어를 선택<br>하게 된 것도 있어요 :) 선택한 것을 절대 후회... <br> 
+							</p>
+							<a href="review.html">더보기 ▶</a>
+							<div class="blog">
+								<img src="images/blog.png" alt="">
+							</div>
+							<div class="data">
+								소소한 어느하루 <span>2019,08,25</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="rvbtn">
+						<div class="next_btn"></div>
+						<div class="prev_btn"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container2">
+		<div class="feature">
+			<h2>MOM's CARE FEATURE</h2>
+			<ul class="boxone clearfix">
+				<li>
+					<img src="images/bgimg02_1.jpg" alt="3img">
+					<div class="sbox1 wow slideInLeft" data-wow-delay="0"></div>
+				</li>
+				<li class="boxo_txt">
+					<h4>THE BEST PREMIUM</h4>
+					<p>대한민국 최고의 명품 산후조리원 명성에 걸맞는<br> 최고의 서비스를 제공합니다. 어디에서도 누릴 수 없는<br> 최고의 시설과 전망, 최적화된 산후조리 서비스를<br> 편안하게 누리실 수 있습니다. 또한 전문적인 모유수유 및<br> 부모교육 서비스를 제공함으로써 육아에 대한 막연한<br> 두려움을 해소하고 소중한 아이를 자존감 높은 아이로<br> 키울 수 있도록 지원합니다.</p>
+				</li>
+			</ul>
+			<ul class="boxtwo clearfix">
+				<li>
+					<img src="images/bgimg02_2.jpg" alt="3img">
+					<div class="sbox2 wow slideInRight"></div>
+				</li>
+				<li class="boxt_txt">
+					<h4>THE SAFETY PLACE</h4>
+					<p>맘스케어 산후조리원은 산모와 아이의<br> 안전과 건강을 가장 먼저 생각합니다.<br> 각 분야의 전문가로 구성된 의료지원팀과 서비스지원팀이<br> 여러분의 편안하고 건강한 산후조리를 위하여<br> 최선의 노력을 다하고 있습니다.</p>
+				</li>
+			</ul>
+			<ul class="boxthree clearfix">
+				<li>
+					<img src="images/bgimg02_3.jpg" alt="3img">
+					<div class="sbox3 wow slideInLeft"></div>
+				</li>
+				<li class="boxth_txt">
+					<h4>THE PERFECT SYSTEM</h4>
+					<p>맘스케어 산후조리원은 오랜 기간 수많은 고객분들에게<br> 인정받은 체계적인 시스템을 보유한 프리미엄급<br> 명품 산후조리원 입니다.<br> 오랜 경험을 가진 운영진과 각 분야 전문가들이 연구한<br> 결과를 토대로 최선을 다해 아이의 상태를 살피고<br> 산모의 건강을 돌보며 전문적이고 따뜻한 감성<br> 산후조리 서비스를 제공합니다. </p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="bottom_wrap">
+		<div class="bottom">
+			<ul class="clearfix">
+				<li>
+					<img src="images/icon02_1.png" alt="">
+					<div class="bt_txt">
+						<h3>대표전화 안내</h3>
+						<p class="call">02-1234-5678</p>
+					</div>
+				</li>
+				<li>
+					<img src="images/icon02_2.png" alt="">
+					<div class="bt_txt">
+						<h3>상담시간 안내</h3>
+						<p>전화상담 : AM 10 ~ PM 06:30<br>방문상담 : AM 10 ~ PM 05:30</p>	
+					</div>
+				</li>
+				<li>
+					<img src="images/icon02_3.png" alt="">
+					<div class="bt_txt">
+						<h3>면회 안내</h3>
+						<p class="bt_go"><a href="tos.html">바로가기</a></p>
+					</div>
+				</li>
+				<li>
+					<img src="images/icon02_4.png" alt="">
+					<div class="bt_txt">
+						<h3>온라인 예약문의</h3>
+						<p class="bt_go"><a href="reservation.html">바로가기</a></p>	
+					</div>
+				</li>
+				<li>
+					<img src="images/icon02_5.png" alt="">
+					<div class="bt_txt">
+						<h3>찾아오시는 길</h3>
+						<p class="bt_go"><a href="location.html">바로가기</a></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<footer>
+		<div class="footer_wrap">
+				<div class="footer_logo clearfix">
+					<img src="images/logo.png" alt="">
+				</div>
+			<div class="footerBox">	
+				<div class="footernav clearfix">
+					<ul>
+						<li>이용약관</li>
+						<li>개인정보 취급방침</li>
+						<li>이메일 무단수집거부</li>
+						<li>사이트맵</li>
+					</ul>
+				</div>
+				<div class="footerText">
+					<p>맘스케어 산후조리원 전화 : 02)1234-5678 FAX : 02)8765-4321</p>
+					<p>주소 : 서울 구로구 구로동 606-4 사업자등록번호 : 122-34-56789 대표자: 박맘스</p>
+					<p>COPYRIGHT ⓒMOM'SCARE. ALL RIGHTS RESERVED</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>

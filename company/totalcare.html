@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">	
+	<title>:::MOM'S CARE:::</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".toggleMenu").click(function(){
+				var myClass = $(this).attr("class");
+				console.log(myClass)
+				if(myClass == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$("#main_menu").stop().animate({left:0},300)
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$("#main_menu").stop().animate({left:"-100%"},300)
+				}
+			});
+			// $(window).on("resize",function(){});
+			$(window).resize(function(){
+				var wSize = $(window).width();
+				console.log(wSize);
+				if(wSize > 960){
+					$("#header_top").find(".toggleMenu").removeClass("change");
+				}else{
+					$("#header_top").find(".toggleMenu").removeClass("change");
+					$("#main_menu").css({left:"-100%"});
+				}
+			});
+		});
+	</script>
+</head>
+<body>
+	<body>
+	<header id="main_header" class="sub_header">
+		<div id="header_top">
+			<h1><a href="index.html"><img src="images/logo.png" alt=""></a></h1>
+			<nav id="main_menu">
+				<ul class="clearfix">
+					<li><a href="sub.html">조리원안내</a>
+						<ul class="submenu">
+							<li><a href="sub.html">맘스케어 소개</li></a>
+							<li><a href="location.html">찾아오시는 길</li></a>
+						</ul>		
+					</li>
+					<li><a href="newborn.html">시설소개</a>
+						<ul class="submenu">
+							<li><a href="newborn.html">신생아실</li></a>
+							<li><a href="mother.html">산모실</li></a>
+						</ul>
+					</li>
+					<li><a href="program.html">프로그램</a>
+						<ul class="submenu">
+							<li><a href="program.html">산전,후 프로그램</li></a>
+							<li><a href="totalcare.html">토탈케어</li></a>
+						</ul>
+					</li>
+					<li><a href="charge.html">이용안내</a>
+						<ul class="submenu">
+							<li><a href="charge.html">이용요금</li></a>
+							<li><a href="tos.html">이용 및 준수사항</li></a>
+							<li><a href="reservation.html">예약문의</li></a>
+						</ul>
+					</li>
+					<li><a href="notice.html">커뮤니티</a>
+						<ul class="submenu">
+							<li><a href="notice.html">공지사항</li></a>
+							<li><a href="review.html">이용후기</li></a>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		<div class="toggleMenu">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		</div>
+		<div id="subWrap">
+			<div class="subBg03">
+				<div class="subTitle">
+					<h2>프로그램</h2>
+				</div>
+			</div>
+			<div class="menuBt01">
+				<ul>
+					<li><a href="program.html">산전,후 프로그램</li></a>
+					<li class="active"><a href="totalcare.html">토탈케어</li></a>
+				</ul>
+			</div>
+		</div>
+	</header>
+	<div class="subContainer">
+		<ul class="clearfix">
+			<li><img src="images/subloc01.png" alt="subhome"></li>
+			<li><img src="images/subloc02.png" alt="subarrow"></li>
+			<li><p>프로그램</p></li>
+			<li><img src="images/subloc02.png" alt="subarrow"></li>
+			<li><p>토탈케어</p></li>
+		</ul>
+	</div>
+	<div class="subimg">
+		<img src="images/subm02_4.png" alt="">
+	</div>
+		<footer>
+		<div class="footer_wrap">
+				<div class="footer_logo clearfix">
+					<img src="images/logo.png" alt="">
+				</div>
+			<div class="footerBox">	
+				<div class="footernav clearfix">
+					<ul>
+						<li>이용약관</li>
+						<li>개입정보 취급방침</li>
+						<li>이메일 문단수집거부</li>
+						<li>사이트맵</li>
+					</ul>
+				</div>
+				<div class="footerText">
+					<p>맘스케어 산후조리원 전화 : 02)1234-5678 FAX : 02)8765-4321</p>
+					<p>주소 : 서울 구로구 구로동 606-4 사업자등록번호 : 122-34-56789 대표자: 박맘스</p>
+					<p>COPYRIGHT ⓒMOM'SCARE. ALL RIGHTS RESERVED</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
