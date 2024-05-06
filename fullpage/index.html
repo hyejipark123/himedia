@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>:::SEOUL BIKE:::</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/fullpage.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#fullpage").fullpage({
+				anchors:["1st","2st","3st","4st","5st"],
+				menu:"#topMenu",
+				navigation:true,
+				slideNavigation:true,
+				afterLoad:function(link,index){
+					if(index == 3){
+						$(".phoneI").addClass("on");
+					}else{
+						$(".phoneI").removeClass("on");
+					}
+				}
+			});
+			$(".toggleMenu").click(function(){
+				var myClass = $(this).attr("class");
+				console.log(myClass)
+				if(myClass == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$("#topMenu").stop().animate({left:0},300)
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$("#topMenu").stop().animate({left:"-100%"},300)
+				}
+			});
+			$(window).resize(function(){
+				var wSize = $(window).width();
+				console.log(wSize);
+				if(wSize > 960){
+					$(".header").find(".toggleMenu").removeClass("change");
+				}else{
+					$(".header").find(".toggleMenu").removeClass("change");
+					$("#topMenu").css({left:"-100%"});
+				}
+			});
+			var myslide = $('.sView').slick({
+				  dots: false,
+				  autoplay:false,
+					speed: 300,
+				  slidesToShow: 3,
+				  slidesToScroll: 3,
+				  arrows:true,
+				  nextArrow: $(".next_btn"),
+				  prevArrow: $(".prev_btn"),
+				  responsive: [
+				    // {
+				    //   breakpoint: 1920,
+				    //   settings: {
+				    //     slidesToShow: 3,
+				    //     slidesToScroll: 3,
+				    //     infinite: true,
+				    //     dots: true
+				    //   }
+				    // },
+				    {
+				      breakpoint: 959,
+				      settings: {
+				        slidesToShow: 1,
+				        slidesToScroll: 1
+				      }
+				    },
+					  ]
+
+			});
+			
+
+			function animate(){
+			$('.bg_bike').css('left', '+=10');
+			if($('.bg_bike').position().left >= 2000) $('.bg_bike').css('left', '-600px');
+			}
+			setInterval(animate, 50);
+
+			$(window).resize(function(){
+				sHeight();
+			});
+
+			function sHeight(){
+				var sliderHeight = $(window).height();
+				$(".slider1").height(sliderHeight);
+			}
+			sHeight();
+		});
+	</script>
+</head>
+<body>
+	<nav id="navTop">
+		<div class="header">
+			<img src="images/logo.png" alt="Logo">
+			<ul id="topMenu" class="clearfix">
+				<li>
+					<a href="javascript:void(0);">따릉이란</a>
+					<ul class="submenu">
+						<li><a href="#!">따릉이소개</a></li>
+						<li><a href="#!">이용안내</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);">대여소조회</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">이용권구매</a>
+					<ul class="submenu">
+						<li><a href="#!">회원</a></li>
+						<li><a href="#!">비회원</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);">고객센터</a>
+					<ul class="submenu">
+						<li><a href="#!">공지사항</a></li>
+						<li><a href="#!">시민의견수렴</a></li>
+						<li><a href="#!">FAQ</a></li>
+					</ul>
+				</li>
+			</ul>
+		<div class="toggleMenu">
+			<div class="bar1"></div>
+			<div class="bar2"></div>
+			<div class="bar3"></div>
+		</div>
+		</div>
+	</nav>
+	<div id="fullpage">
+
+		<!-- #page1 -->
+		<div class="section page" id="page1" data-anchor="1st">
+			<div class="textBox">
+				<h1>서울자전거 <span>'따</span><span>릉</span><span>이'</span>를 타보세요!</h1>
+			</div>
+			<!-- 구름 -->
+			<div class="bg_cloud">
+				<img src="images/cloud.png" alt="구름" class="cloud1">
+				<img src="images/cloud1.png" alt="구름" class="cloud2">
+				<img src="images/cloud2.png" alt="구름" class="cloud3">
+			</div>
+			<!-- 자동차 -->
+			<div class="bg_car">
+				<img src="images/car.png" alt="car" class="car1">
+				<img src="images/car1.png" alt="car" class="car2">
+				<img src="images/car2.png" alt="car" class="car3">
+			</div>
+			<div class="bus">
+				<img src="images/bus.png" alt="bus">
+			</div>
+			<!-- 자전거 -->
+			<div class="bg_bike">
+				<img src="images/bikeh.png" alt="bike">
+			</div>
+			<div class="scroll">
+				<a href="#2st"><img src="images/scrolld.png" alt=""></a>
+			</div>
+		</div>
+
+		<!-- #page2 -->
+		<div class="section page" id="page2" data-anchor="2st">
+			<div class="flexWrap">
+				<div class="flexbox">
+					<div class="content">
+						<a href="#">대여방법</a>
+					</div>
+				</div>
+				<div class="flexbox">
+					<div class="content">
+						<a href="#">반납방법</a>
+					</div>
+				</div>
+				<div class="flexbox">
+					<div class="content">
+						<a href="#">대여소현황</a>
+					</div>
+				</div>
+				<div class="flexbox">
+					<div class="content">
+						<a href="#">대여하기</a>
+					</div>
+				</div>
+			</div>
+			<div class="scroll">
+				<a href="#3st"><img src="images/scrolld.png" alt=""></a>
+			</div>
+		</div>
+
+		<!-- #page3 -->
+		<div class="section page" id="page3" data-anchor="3st">
+			<div class="phoneWrap">
+				<ul class="phoneI clearfix">
+					<li>
+						<img src="images/phone01.png" alt="" class="pi1">
+					</li>
+					<li>
+						<img src="images/phone02.png" alt="" class="pi2">
+					</li>
+					<li>
+						<img src="images/phone03.png" alt="" class="pi3">
+					</li>
+				</ul>
+				<div class="phoneIcon">
+					<img src="images/mobile.png" alt="">
+				</div>
+				<div class="phoneT">
+					<h1>스마트폰으로<br>간편하게!</h1>
+				</div>
+				<div class="phoneT2">
+					<h1>누구나, 언제나, 어디서나<br>쉽고 편리하게 이용할 수 있습니다.</h1>
+				</div>
+				<div class="download">
+					<a href="https://apps.apple.com/us/app/%EC%84%9C%EC%9A%B8%EC%9E%90%EC%A0%84%EA%B1%B0-%EB%94%B0%EB%A6%89%EC%9D%B4/id1037272004"><img src="images/appstore.png" alt="appstore"></a>
+					<a href="https://play.google.com/store/apps/details?id=com.dki.spb_android"><img src="images/googleplay.png" alt="googleplay"></a>
+				</div>
+			</div>
+			<div class="scroll">
+				<a href="#4st"><img src="images/scrolld.png" alt=""></a>
+			</div>
+		</div>
+
+		<!-- #page4 -->
+		<div class="section page" id="page4" data-anchor="4st">
+			<div class="page4Tit">
+				<h2>따릉이타고 <span>"서울"</span> 어디까지 가봤니?</h2>
+				<p>#따릉이 #따릉이드라이브</p>
+			</div>
+				<div class="sView">
+					<div><img src="images/slide01.png" alt=""></div>	
+					<div><img src="images/slide02.png" alt=""></div>	
+					<div><img src="images/slide03.png" alt=""></div>	
+					<div><img src="images/slide04.png" alt=""></div>	
+					<div><img src="images/slide05.png" alt=""></div>	
+					<div><img src="images/slide06.png" alt=""></div>	
+					<div><img src="images/slide07.png" alt=""></div>	
+					<div><img src="images/slide08.png" alt=""></div>	
+					<div><img src="images/slide09.png" alt=""></div>	
+					<div><img src="images/slide10.png" alt=""></div>	
+					<div><img src="images/slide11.png" alt=""></div>	
+					<div><img src="images/slide12.png" alt=""></div>	
+				</div>
+				<div class="btn clearfix">
+					<div class="next_btn"></div>
+					<div class="prev_btn"></div>
+				</div>
+			<div class="scroll">
+				<a href="#5st"><img src="images/scrolld.png" alt=""></a>
+			</div>
+		</div>
+
+		<!-- #page5 -->
+		<div class="section page" id="page5" data-anchor="5st">
+			<div class="noticeWrap">
+				<h1>따릉이 LIVE</h1>
+				<div class="noticeBox clearfix">
+					<div class="boxOne">
+						<ul>
+							<li>
+								<a href="#">
+									<img src="images/notice01.png" alt="">		
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/notice02.png" alt="">		
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="boxTwo">
+						<a href="https://youtu.be/diFEUwlzaQY" target="_blank">
+							<img src="images/notice03.png" alt="홍보영상"></a>
+					</div>
+					<div class="boxThree">
+						<ul>
+							<li>
+								<a href="#">
+									<img src="images/notice04.png" alt="">		
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/notice05.png" alt="">		
+								</a>
+							</li>
+							<div class="over">
+								<a href="#"><p>일일권 제로페이<br>구매시 50% 감면</p></a>
+							</div>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section page fp-auto-height" id="page6" data-anchor="6st">
+			<div class="footer" style="height:100px;background:#eee">
+				<div class="footerWrap">
+					<div class="footernav">
+						<ul class="clearfix">
+							<li>이용약관</li>
+							<li>개인정보처리방침</li>
+							<li>보험안내</li>
+						</ul>
+					</div>
+					<div class="address">
+						<p>서울특별시 중구 세종대로 110 Tel : 1599-0120 (사업자등록번호 : 111-22-33333) 우편번호 04524</p>
+						<p>COPYRIGHT ⓒ All RIGHTS RESERVED.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

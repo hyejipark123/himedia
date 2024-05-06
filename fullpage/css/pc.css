@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+nav#navTop{
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	margin: auto;
+	_background-color: pink;
+	padding-left: 10px;
+}
+.header{
+	margin: 0 auto;
+	width: 1200px;
+	padding-top: 30px;
+}
+.header>ul{float: right;}
+.header>ul>li{float: left;}
+.header>ul>li>a{
+	display: block;
+	line-height: 50px;
+	text-align: center;
+	padding: 0 20px;
+	font-weight: bold;
+}
+.submenu{display: none;}
+.submenu>li{color: #fff;text-align: center;line-height:40px;}	
+.header>ul>li:hover .submenu{display: block;}
+
+/*페이지 배경*/
+#page1{background-image: url(../images/bg1p.jpg);}
+#page3{background-image: url(../images/page3.jpg);}
+#page4{background-image: url(../images/seoul1.jpg);}
+#page5{background-image: url(../images/bg5.jpg);}
+.page{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.scroll{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	animation-name: xScroll;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+@keyframes xScroll{
+	from{bottom:20px;}
+	to{bottom: 40px;}
+}
+
+/*page #1*/
+.section{position: relative;}
+.textBox{
+	text-align: center;
+	width: 800px;
+	_background-color: pink;
+	position: absolute;
+	top: 18%;left: 50%;
+	transform: translateX(-50%);
+	z-index: 9999;}
+.textBox h1{font-size: 40px;}
+.textBox h1>span{color: #589054;font-size: 45px;position: relative;}
+.textBox h1>span:after{
+	content: "";background-color: #589054;
+	width: 15px;height: 10px;clip-path: polygon(50% 78%, 0 0, 100% 0);
+	position: absolute;top: 0;left: 15px;}
+.cloud1{position: absolute;top:150px;left: 25%;
+	animation:cloud 1.2s both cubic-bezier(0.38, 0.07, 0.71, 1.04) alternate infinite; 
+}
+.cloud2{position: absolute;top: 80px;left: 42%;
+	animation:cloudOne 1.4s both cubic-bezier(0.38, 0.07, 0.71, 1.04) alternate infinite; 
+}
+.cloud3{position: absolute;top:200px;left: 60%;
+	animation:cloudTwo 1.5s both cubic-bezier(0.38, 0.07, 0.71, 1.04) alternate infinite; 
+
+}
+.bg_cloud img{display: block;}
+@keyframes cloud{
+	to{transform: translate(0px, 20px);}
+}
+@keyframes cloudOne{
+	to{transform: translate(0px,-15px);}
+}
+@keyframes cloudTwo{
+	to{transform: translate(0px,20px);}
+}
+
+.car1{
+	position: absolute;
+	top: 50%;
+	left: 17%;
+	animation:car1 1.2s alternate infinite;
+}
+@keyframes car1{
+	to{transform: translate(20px, 0px);}
+}
+.car2{
+	position: absolute;
+	top: 52%;
+	left: 30%;
+	animation:car2 1.2s alternate infinite;
+}
+@keyframes car2{
+	to{transform: translate(20px, 0px);}
+}
+.car3{
+	position: absolute;
+	top: 55%;
+	left: 25%;
+	animation:car3 1.2s alternate infinite;
+}
+@keyframes car3{
+	to{transform: translate(-20px, 0px);}
+}
+.bus{
+	position: absolute;
+	right: 10%;
+	top: 50%;
+	animation:bus 2s alternate infinite forwards;
+}
+@keyframes bus{
+	to{right: 10px;}
+}
+.bg_bike{position: absolute;left: 0;top: 60%;}
+.bg_bike>img{position: absolute;left: 0;top: 60%;}
+
+/*page #2*/
+
+.flexWrap{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	border: 1px solid  #000;
+}
+.flexWrap .flexbox{
+	position: relative;
+	_background-color: pink;
+	height: 100%;
+	flex: 1;
+	border-right: 2px solid #000;
+	overflow: hidden;
+	transition: 0.5s ease-in-out;
+}
+.flexWrap .flexbox:last-child{border-right: none;}
+.flexWrap .flexbox:hover{flex-grow: 2;}
+.flexWrap .flexbox:nth-child(1){
+	background: url(../images/sbike01.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: grayscale(100%);
+}
+.flexWrap .flexbox:nth-child(2){
+	background: url(../images/sbike02.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: grayscale(100%);
+}
+.flexWrap .flexbox:nth-child(3){
+	background: url(../images/sbike03.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: grayscale(100%);
+}
+.flexWrap .flexbox:nth-child(4){
+	background: url(../images/sbike04.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: grayscale(100%);
+}
+.flexWrap .flexbox .content{
+	position: absolute;
+	top: 40%;
+	margin: 40px;
+	padding: 30px;
+	left: 35%;
+	background: #038C25;
+	visibility: hidden;
+	opacity: 0;
+	transition: 0s;
+	transform: translateY(100px);
+	border-radius: 10%;
+}
+.flexWrap .flexbox .content a{
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+.flexWrap .flexbox:hover .content{
+	visibility: visible;
+	opacity: 1;
+	transition: 0.5s;
+	transition-delay: 0.5s;
+	transform: translateY(0);
+}
+.flexWrap .flexbox:hover{filter: none;}
+
+/*page #3*/
+.phoneWrap{
+	width: 1000px;
+	height: 700px;
+	position: relative;
+	_background-color: pink;
+	margin: 0 auto;	
+}
+.phoneI{
+	width: 500px;
+	height: 800px;
+}
+.phoneI>li{
+	float: left;
+	position: absolute;
+	top: 3%;
+}
+.phoneI>li:nth-child(1){
+	position: absolute;
+	z-index: 0;
+}
+.phoneI>li:nth-child(2){
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	left:20px;
+	top: 50px;
+}
+.phoneI>li:nth-child(3){
+	position: absolute;
+	left:20px;
+	top: 50px;
+	z-index: 2;
+	opacity: 0;
+}
+
+/*.on*/
+.phoneI.on>li:nth-child(1){
+	position: absolute;
+	z-index: 0;
+	animation:pi1 1s ease-in;
+}
+@keyframes pi1{
+	to{left: 0;}
+}
+.phoneI.on>li:nth-child(2){
+	position: absolute;
+	z-index: 1;
+	opacity: 0;
+	left:20px;
+	top: 50px;
+	animation:pi2 1s 0.2s forwards ease-in;
+	box-shadow: -5px 5px 5px 5px rgba(0,0,0,0.2);  
+}
+@keyframes pi2{
+	30%{opacity: 1;}
+	to{left: 70px; top: 0px; opacity: 1;}
+}
+.phoneI.on>li:nth-child(3){
+	position: absolute;
+	left:20px;
+	top: 50px;
+	z-index: 2;
+	opacity: 0;
+	animation:pi3 1s 0.6s forwards ease-in;
+	box-shadow: -5px 5px 5px 5px rgba(0,0,0,0.2);
+}
+@keyframes pi3{
+	40%{opacity: 0;}
+	70%{opacity: 1;}
+	to{left:120px; top: -20px; opacity: 1;}
+}
+.phoneI>li>img{display: block;}
+.phoneIcon{position: absolute;top: 13%;left: 49%;}
+.phoneT{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	top: 25%;
+	left: 50%;}
+.phoneT>h1{color: #fff;font-size: 60px;}
+.phoneT2{width: 600px;height: 100px;position: absolute;top: 55%;left: 50%;}
+.phoneT2>h1{color: #fff;}
+.download{width: 500px;height: 70px;position: absolute;top: 80%;left: 50%;}
+.download>a:first-child{margin-right: 10px;}
+
+
+/*page #4*/
+.page4Tit{
+	width: 600px;
+	margin: 0 auto;
+	text-align: center;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 18%;}	
+.page4Tit h2{font-size:30px;color: #fff;padding-bottom: 10px;}	
+.page4Tit h2>span{font-size: 35px; color: #589054;}
+.page4Tit p{color: #fff;font-weight: bold;}	
+.sView{width: 1200px;height: 800px;margin: 0 auto;position: absolute;top: 30%;left: 50%;transform: translateX(-50%);}
+.btn{position: relative;}
+.next_btn{
+	background: url(../images/btn_next.png) no-repeat;
+	width: 50px;height: 50px;position: absolute;right: 250px;top: 50%;
+}
+.prev_btn{
+	background: url(../images/btn_prev.png) no-repeat;
+	width: 50px;height: 50px;position: absolute;left: 250px;top: 50%;}
+
+/*page #5*/
+.page5{width: 100%;height: 100%;}
+.noticeWrap{width: 1200px;height: 700px;margin: 0 auto;}
+.noticeWrap h1{text-align: center;}
+.noticeBox img{display: block;}
+.noticeBox{padding-top: 30px;}
+.boxOne{width: 300px;height: 620px;float: left;}
+.boxTwo{width: 600px;height: 620px;float: left;}
+.boxThree{width: 300px;height: 620px;float: left;}
+.zero:hover .over{display: block;}
+.over{display: none;width: 300px;height: 310px;background-color: rgba(0,0,0,0.6);position: relative;top: -310px;}
+.over p{color: #fff;text-align: center;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);font-weight: bold;font-size: 18px}
+
+/* page6 */
+.footerWrap{width: 1200px;margin: auto;}
+.footernav>ul{}
+.footernav>ul>li{
+	float: left;
+	margin-right: 15px;
+	cursor: pointer;
+	padding-top: 10px;
+	font-size: 14px;
+}
+.address{font-size: 14px;padding-top: 10px;}
+
+/* top */
+.top{
+	position: fixed;
+	width: 100px;
+	height: 100px;
+	line-height: 100px;
+	right: 50px;
+	bottom: -100px;
+	border-radius: 50%;
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	animation:viewTop 1s infinite alternate;
+	opacity: 0; 
+	transition: 0.4s;
+}
+.top.view{
+	opacity: 1;
+	bottom: 50px;
+}
+@keyframes viewTop{
+	from{transform: translateY(-20px);}
+	to{transform: translateY(0);}
+}
